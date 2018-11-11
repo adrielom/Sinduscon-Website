@@ -1,0 +1,343 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  width: 100%;
+  height: 100%;
+  margin: 0px;
+  padding: 0px;
+  overflow-x: hidden;
+}
+
+.pl-50 {
+  padding-left: 50px;
+}
+
+.hex-container {
+  height: 75%;
+  margin: 0;
+  padding: 0 0 0 3% !important;
+  left: -5%;
+}
+
+.container-screen2 {
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+.background-second-screen {
+  height: 100vh;
+  background-color: #e7dfd2;
+}
+
+.left-side-img-screen2 {
+  position: absolute;
+  left: -45px;
+}
+
+.right-side-img-screen2 {
+  position: absolute;
+  right: -45px;
+  top: 65vh;
+}
+
+.banner {
+  background-image: url("../img/first-panel-bg.png");
+  background-size: cover;
+  height: 100vh;
+  background-repeat: no-repeat;
+}
+
+.column-3 {
+  left: 70px;
+  bottom: 40px;
+}
+
+.white-bg-rounded {
+  background-color: #fff;
+  border-radius: 15px;
+  height: 110px;
+  width: 270px;
+  align-content: start;
+  padding: 2px;
+}
+
+.orange-text {
+  color: #f15a29;
+}
+
+.blue-text {
+  color: #144372;
+}
+
+.hashtag {
+  text-align: center;
+  font-size: 1.4rem;
+  font-family: exoBoldItalic;
+  letter-spacing: 0.1rem;
+}
+
+.logo-banner {
+  width: 40%;
+}
+
+.timer-display {
+  font-size: 3.4rem;
+  text-align: center;
+}
+
+.screen2-title-display {
+  font-size: 2.8rem;
+  text-align: center;
+  margin-top: 25px;
+}
+
+.banner2 {
+  background-color: rebeccapurple;
+}
+.orange-column {
+  position: relative;
+  left: 10%;
+}
+
+.blue-column {
+  position: relative;
+  left: 22%;
+  bottom: 20%;
+}
+
+#simule-credito h2 {
+  text-align: center;
+  font-size: 1.4rem;
+  line-height: 1.6rem;
+  width: 70%;
+  position: relative;
+  left: -5px;
+  top: 55px;
+}
+
+#simule-credito .hex-small {
+  bottom: 30%;
+  left: 55%;
+}
+
+#avaliamos-receber h2 {
+  text-align: center;
+  font-size: 1.4rem;
+  line-height: 1.6rem;
+  width: 70%;
+  position: relative;
+  left: -5px;
+  top: 55px;
+}
+
+#avaliamos-receber .hex-small {
+  bottom: 25%;
+  left: 30%;
+}
+
+#condicoes-especiais h2 {
+  text-align: center;
+  font-size: 1.4rem;
+  line-height: 1.6rem;
+  width: 50%;
+  position: relative;
+  left: -10px;
+  top: 50px;
+}
+
+#condicoes-especiais .hex-small {
+  bottom: 30%;
+  left: 10%;
+}
+
+#imoveis-prontos h2 {
+  text-align: end;
+  font-size: 1.3rem;
+  line-height: 1.6rem;
+  width: 50%;
+  position: relative;
+  left: -15px;
+  top: 35px;
+}
+
+#imoveis-prontos .hex-small {
+  bottom: 110%;
+  left: 5%;
+}
+
+#taxas-juros .hex-small {
+  bottom: 115%;
+  left: 30%;
+}
+
+#taxas-juros h2 {
+  text-align: end;
+  font-size: 1.3rem;
+  line-height: 1.6rem;
+  width: 45%;
+  position: relative;
+  left: -20px;
+  top: 50px;
+}
+
+#use-fgts .hex-small {
+  bottom: 115%;
+  left: 55%;
+}
+
+#use-fgts h2 {
+  text-align: center;
+  font-size: 1.6rem;
+  line-height: 1.8rem;
+  width: 40%;
+  position: relative;
+  left: -10px;
+  top: 50px;
+}
+
+.hex {
+  height: 200px;
+  width: auto;
+}
+
+.hex-mid {
+  width: 200px;
+  height: 100%;
+}
+
+.hex-small {
+  height: 60px;
+  width: 180px;
+}
+
+.blue-hex-small {
+  background-image: url(../img/sec-blue-hex-img.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  position: relative;
+  z-index: 1;
+}
+
+.blue-hex {
+  background-image: url(../img/blue-hex-img.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  position: relative;
+  z-index: 2;
+}
+
+.orange-hex-small {
+  background-image: url(../img/sec-orange-hex-img.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  position: relative;
+  z-index: 1;
+}
+
+.orange-hex {
+  background-image: url(../img/orange-hex-img.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  position: relative;
+  z-index: 2;
+}
+
+.moving-circle {
+  height: 110px;
+  width: 110px;
+  background-color: #f15a29;
+  border-radius: 50%;
+  position: absolute;
+  right: 28%;
+  z-index: 1;
+}
+
+.circle {
+  height: 110px;
+  width: 110px;
+  background-color: yellow;
+  border-radius: 50%;
+  position: absolute;
+  right: 28%;
+  z-index: 1;
+}
+
+.days-left {
+  padding: 0.4rem;
+  height: 100%;
+}
+
+.img-container {
+  justify-content: flex-end;
+  align-content: flex-end;
+  align-self: flex-end;
+  position: relative;
+  bottom: -22px;
+  overflow: hidden;
+}
+
+.orange-round-box {
+  background-color: #f15a29;
+}
+
+#title-banner1 {
+  width: 55%;
+  font-size: 3.2rem;
+  line-height: 3.2rem;
+}
+
+#days-missing {
+  font-size: 2.6rem;
+  height: 100%;
+  line-height: 2.8rem;
+}
+
+#days-missing span {
+  font-size: 2.8rem;
+}
+
+/* Fonts */
+
+.exo {
+  font-family: exo;
+}
+.exoItalic {
+  font-family: exoItalic;
+}
+.exoBoldItalic {
+  font-family: exoBoldItalic;
+}
+.myriadPro {
+  font-family: myriadPro;
+}
+.myriadProBold {
+  font-family: myriadProBold;
+}
+
+@font-face {
+  font-family: exo;
+  src: url("../fonts/Exo2-Regular.otf");
+}
+
+@font-face {
+  font-family: exoItalic;
+  src: url("../fonts/Exo2-Italic.otf");
+}
+
+@font-face {
+  font-family: exoBoldItalic;
+  src: url("../fonts/Exo-Bold-Italic.otf");
+}
+
+@font-face {
+  font-family: myriadPro;
+  src: url("../fonts/MyriadPro-Regular.otf");
+}
+
+@font-face {
+  font-family: myriadProBold;
+  src: url("../fonts/MyriadPro-Bold.otf");
+}

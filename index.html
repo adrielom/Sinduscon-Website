@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <title>Sinduscon</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <link rel="stylesheet" href="css/main.css" />
+
+    <!-- Bootstrap CSS -->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/css/bootstrap.min.css"
+      integrity="sha384-Smlep5jCw/wG7hdkwQ/Z5nLIefveQRIY9nfy6xoR1uRYBtpZgI6339F5dgvm/e9B"
+      crossorigin="anonymous"
+    />
+  </head>
+
+  <body>
+    <!-- Tela 1 -->
+    <div class="container-fluid">
+      <div class="banner row">
+        <div class="col-md-6 d-md-flex flex-md-column w-100 h-100">
+          <div class="container my-auto">
+            <h2
+              class="text-uppercase mx-auto text-white exoBoldItalic mb-5"
+              id="title-banner1"
+            >
+              Venha para o maior feirão de imóveis que você já viu.
+            </h2>
+
+            <div class="d-flex justify-content-center mb-2">
+              <div class="white-bg-rounded mr-5">
+                <div class="days-left">
+                  <div class="col-md-9">
+                    <h2
+                      class="text-uppercase exoBoldItalic blue-text"
+                      id="days-missing"
+                    >
+                      faltam <span class="orange-text">12 dias</span>
+                    </h2>
+                  </div>
+                </div>
+              </div>
+              <div class="moving-circle"></div>
+              <div class="circle"></div>
+            </div>
+
+            <h2 class="timer-display text-white exoBoldItalic mr-5">
+              120:32:15h
+            </h2>
+          </div>
+        </div>
+        <div
+          class="col-md-6 col-10 my-auto justify-content-start align-items-center d-md-flex flex-column column-3"
+        >
+          <img
+            class="img-fluid logo-banner mb-4"
+            src="img/sinduscon-logo.png"
+          />
+          <p class="blue-text hashtag">
+            <span class="orange-text">#</span>pronto<span class="orange-text"
+              >pra</span
+            >morar<span class="orange-text">já</span>
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Tela 2 -->
+    <div class="container-fluid background-second-screen container-screen2">
+      <div class="row">
+        <img
+          src="/img/blue-triangle.png"
+          class="left-side-img-screen2 d-none d-md-block"
+        />
+        <img
+          src="/img/orange-triangle.png"
+          class="right-side-img-screen2 d-none d-md-block"
+        />
+        <div
+          class="col-md-12 pt-5 blue-text justify-content-center screen2-title-display exoBoldItalic"
+        >
+          <span class="orange-text">22 A 25/NOV</span> RIOMAR FORTALEZA
+        </div>
+      </div>
+
+      <div class="hex-container container-fluid pt-5 position-absolute">
+        <!-- ORANGE -->
+
+        <div class="orange-column pt-4">
+          <div class="col-md-1"></div>
+          <div class="col-md-9 d-flex flex-row justify-content-around">
+            <div class="hex position-relative" id="imoveis-prontos">
+              <div class="hex-mid orange-hex">
+                <h2 class="text-white mx-auto exoBoldItalic">
+                  IMÓVEIS PRONTOS OU EM CONSTRUÇÃO
+                </h2>
+              </div>
+              <div class="hex-small orange-hex-small"></div>
+            </div>
+            <div class="hex position-relative" id="taxas-juros">
+              <div class="hex-mid orange-hex">
+                <h2 class="text-white mx-auto exoBoldItalic">
+                  TAXAS DE JUROS IMPERDÍVEIS
+                </h2>
+              </div>
+              <div class="hex-small orange-hex-small"></div>
+            </div>
+            <div class="hex position-relative" id="use-fgts">
+              <div class="hex-mid orange-hex">
+                <h2 class="text-white mx-auto exoBoldItalic">USE SEU FGTS</h2>
+              </div>
+              <div class="hex-small orange-hex-small"></div>
+            </div>
+          </div>
+          <div class="col-md-2"></div>
+        </div>
+
+        <!-- BLUE -->
+
+        <div class="blue-column">
+          <div class="col-md-3"></div>
+          <div class="col-md-9 d-flex flex-row justify-content-around">
+            <div class="hex position-relative" id="condicoes-especiais">
+              <div class="hex-mid blue-hex">
+                <h2 class="text-white mx-auto exoBoldItalic">
+                  CONDIÇÕES SUPER ESPECIAIS
+                </h2>
+              </div>
+              <div class="hex-small blue-hex-small"></div>
+            </div>
+            <div class="hex position-relative" id="avaliamos-receber">
+              <div class="hex-mid blue-hex">
+                <h2 class="text-white mx-auto exoBoldItalic">
+                  AVALIAMOS RECEBER SEU IMÓVEL
+                </h2>
+              </div>
+              <div class="hex-small blue-hex-small"></div>
+            </div>
+            <div class="hex position-relative" id="simule-credito">
+              <div class="hex-mid blue-hex">
+                <h2 class="text-white mx-auto exoBoldItalic">
+                  SIMULE SEU CRÉDITO IMOBILIÁRIO
+                </h2>
+              </div>
+              <div class="hex-small blue-hex-small"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.3.1.min.js"></script>
+    <script src="js/main.js"></script>
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script
+      src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+      integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/js/bootstrap.min.js"
+      integrity="sha384-o+RDsa0aLu++PJvFqy8fFScvbHFLtbvScb8AjopnFD+iEQ7wo/CG0xlczd+2O/em"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
