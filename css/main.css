@@ -135,7 +135,7 @@ html {
 
 #avaliamos-receber .hex-small {
   bottom: 25%;
-  left: 30%;
+  left: 32%;
 }
 
 #condicoes-especiais h2 {
@@ -283,12 +283,104 @@ html {
   background-color: #f15a29;
 }
 
+@media screen and (max-width: 769px) {
+  #title-banner1 {
+    font-size: 2.5rem !important;
+    margin-top: 25%;
+    margin-bottom: 5%;
+  }
+
+  #days-missing {
+    width: 65%;
+  }
+
+  .white-bg-rounded {
+    background-color: #fff;
+    border-radius: 15px;
+    height: 110px;
+    width: 55%;
+    align-content: start;
+    padding: 2px;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  #title-banner1 {
+    line-height: 0.2rem !important;
+    font-size: 0.5rem !important;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .column-3 {
+    left: 0;
+    bottom: 0;
+    margin: 0;
+    padding: 0;
+    width: 100% !important;
+    height: 30% !important;
+  }
+
+  .timer-display {
+    font-size: 2.5rem;
+    text-align: center;
+    margin: 0;
+  }
+
+  .banner {
+    background-position: 28% 0;
+  }
+
+  .logo-banner {
+    width: 35%;
+  }
+
+  #title-banner1 {
+    font-size: 2.1rem !important;
+    line-height: 2.8rem !important;
+    margin-top: 5% !important;
+    margin-bottom: 10%;
+  }
+
+  #days-missing {
+    width: 65%;
+    font-size: 2rem !important;
+  }
+
+  #days-missing span {
+    font-size: 2rem !important;
+  }
+
+  .white-bg-rounded {
+    background-color: #fff;
+    border-radius: 15px;
+    height: 110px;
+    width: 70%;
+    align-content: start;
+    padding: 2px;
+    margin-bottom: 2%;
+  }
+
+  .moving-circle {
+    right: 18%;
+  }
+
+  .circle {
+    right: 18%;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  #title-banner1 {
+    margin-top: 0 !important;
+  }
+}
+
 #title-banner1 {
   width: 55%;
   font-size: 3.2rem;
   line-height: 3.2rem;
 }
-
 #days-missing {
   font-size: 2.6rem;
   height: 100%;
