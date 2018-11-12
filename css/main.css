@@ -67,6 +67,15 @@ input {
   font-size: 3rem;
 }
 
+.marca-conainer {
+  height: 25px;
+  width: 100%;
+}
+
+#estas-sao-marcas {
+  font-size: 2.5rem;
+}
+
 .pl-50 {
   padding-left: 50px;
 }
