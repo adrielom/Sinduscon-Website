@@ -11,6 +11,62 @@ html {
   overflow-x: hidden;
 }
 
+.screen4-background {
+  background-color: #f15a29;
+}
+
+.btn-accent-color {
+  background-color: #02a5e0;
+}
+
+#cadastrar-button {
+  height: 3.3rem;
+  width: 250px;
+  text-align: center;
+  border: none;
+  align-content: center;
+  border-radius: 10px;
+  font-size: 1.3rem;
+}
+
+.layer-video {
+  position: absolute;
+  z-index: 3;
+  font-size: 3.5rem;
+  width: 60%;
+  left: 20%;
+  top: 60%;
+}
+
+.left-side-img-screen3 {
+  position: absolute;
+  left: -75px;
+  top: -200px;
+  overflow: hidden;
+}
+
+.form-group {
+  margin-bottom: 20px !important;
+}
+
+label {
+  font-size: 0.8rem !important;
+}
+
+#email-input-label {
+  margin-bottom: -10px;
+  width: 350px;
+}
+
+input {
+  border-radius: 0 !important;
+  height: 3.3rem;
+}
+
+#receba-informacoes {
+  font-size: 3rem;
+}
+
 .pl-50 {
   padding-left: 50px;
 }
@@ -283,6 +339,14 @@ html {
   width: 350px;
 }
 
+.active-circle {
+  color: #f15a29;
+}
+
+.inactive-circle {
+  color: #ffc9b5;
+}
+
 .building-img {
   height: 100%;
   width: 200px;
@@ -290,14 +354,16 @@ html {
 }
 
 .building-realstate-logo-container {
-  height: 100%;
-  width: 80px;
+  height: 45px;
+  width: 100%;
 }
 
+.building-info {
+  width: 150px;
+}
 .schedule-visit-btn {
   padding-top: 2%;
   margin-top: 5%;
-
   background-color: #736458;
   border-radius: 0 !important;
   font-size: 0.8rem !important;
