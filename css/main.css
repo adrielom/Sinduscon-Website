@@ -28,8 +28,8 @@ html {
 }
 
 .background-second-screen {
-  height: 100vh;
   background-color: #e7dfd2;
+  height: 100vh;
 }
 
 .left-side-img-screen2 {
@@ -48,11 +48,6 @@ html {
   background-size: cover;
   height: 100vh;
   background-repeat: no-repeat;
-}
-
-.column-3 {
-  left: 70px;
-  bottom: 40px;
 }
 
 .white-bg-rounded {
@@ -201,6 +196,7 @@ html {
 .hex {
   height: 200px;
   width: auto;
+  padding: 12px;
 }
 
 .hex-mid {
@@ -279,6 +275,10 @@ html {
   overflow: hidden;
 }
 
+.screen3-title-display {
+  font-size: 2.5rem;
+}
+
 .orange-round-box {
   background-color: #f15a29;
 }
@@ -304,27 +304,40 @@ html {
   }
 }
 
-@media screen and (max-width: 375px) {
-  #title-banner1 {
+@media screen and (max-width: 320px) and (max-height: 480px) {
+  #title-banner1 h2 {
     line-height: 0.2rem !important;
-    font-size: 0.5rem !important;
+    font-size: 0.3rem !important;
+  }
+
+  #days-missing span {
+    font-size: 1.9rem !important;
+  }
+
+  .background-second-screen {
+    height: 300vh;
   }
 }
 
 @media screen and (max-width: 480px) {
-  .column-3 {
-    left: 0;
-    bottom: 0;
-    margin: 0;
-    padding: 0;
-    width: 100% !important;
-    height: 30% !important;
-  }
-
   .timer-display {
     font-size: 2.5rem;
     text-align: center;
     margin: 0;
+  }
+
+  .screen2-title-display {
+    font-size: 2rem !important;
+  }
+
+  .background-second-screen {
+    height: 200vh;
+  }
+
+  .blue-column {
+    position: relative;
+    left: 10%;
+    bottom: 0;
   }
 
   .banner {
@@ -337,8 +350,9 @@ html {
 
   #title-banner1 {
     font-size: 2.1rem !important;
-    line-height: 2.8rem !important;
+    line-height: 2.3rem !important;
     margin-top: 5% !important;
+    padding-top: 5%;
     margin-bottom: 10%;
   }
 
@@ -348,7 +362,7 @@ html {
   }
 
   #days-missing span {
-    font-size: 2rem !important;
+    font-size: 1.9rem !important;
   }
 
   .white-bg-rounded {
@@ -370,9 +384,13 @@ html {
   }
 }
 
-@media screen and (max-width: 768px) {
+@media (min-width: 768px) and (max-width: 1000px) {
+  .blue-column {
+    top: -75%;
+  }
   #title-banner1 {
     margin-top: 0 !important;
+    padding-top: 15%;
   }
 }
 
