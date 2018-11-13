@@ -90,32 +90,32 @@ input {
 }
 
 #photo-1 {
-  background-image: url(/img/photo-1.png);
+  background-image: url("../img/photo-1.png");
   background-repeat: no-repeat;
   background-size: cover;
 }
 #photo-2 {
-  background-image: url(/img/photo-2.png);
+  background-image: url("../img/photo-2.png");
   background-repeat: no-repeat;
   background-size: cover;
 }
 #photo-3 {
-  background-image: url(/img/photo-3.png);
+  background-image: url("../img/photo-3.png");
   background-repeat: no-repeat;
   background-size: cover;
 }
 #photo-4 {
-  background-image: url(/img/photo-4.png);
+  background-image: url("../img/photo-4.png");
   background-repeat: no-repeat;
   background-size: cover;
 }
 #photo-5 {
-  background-image: url(/img/photo-5.png);
+  background-image: url("../img/photo-5.png");
   background-repeat: no-repeat;
   background-size: cover;
 }
 #photo-6 {
-  background-image: url(/img/photo-6.png);
+  background-image: url("../img/photo-6.png");
   background-repeat: no-repeat;
   background-size: cover;
 }
@@ -370,7 +370,7 @@ input {
 }
 
 .blue-hex-small {
-  background-image: url(../img/sec-blue-hex-img.png);
+  background-image: url("../img/sec-blue-hex-img.png");
   background-size: contain;
   background-repeat: no-repeat;
   position: relative;
@@ -378,7 +378,7 @@ input {
 }
 
 .blue-hex {
-  background-image: url(../img/blue-hex-img.png);
+  background-image: url("../img/blue-hex-img.png");
   background-size: contain;
   background-repeat: no-repeat;
   position: relative;
@@ -386,7 +386,7 @@ input {
 }
 
 .orange-hex-small {
-  background-image: url(../img/sec-orange-hex-img.png);
+  background-image: url("../img/sec-orange-hex-img.png");
   background-size: contain;
   background-repeat: no-repeat;
   position: relative;
@@ -394,7 +394,7 @@ input {
 }
 
 .orange-hex {
-  background-image: url(../img/orange-hex-img.png);
+  background-image: url("../img/orange-hex-img.png");
   background-size: contain;
   background-repeat: no-repeat;
   position: relative;
@@ -477,7 +477,7 @@ input {
 }
 
 .building-realstate-img {
-  background-image: url(../img/logos/mota-machado-logo.png);
+  background-image: url("../img/logos/mota-machado-logo.png");
   background-repeat: no-repeat;
   background-size: contain;
   height: 100%;
@@ -508,7 +508,7 @@ input {
 }
 
 .screen10-bg {
-  background-image: url(/img/banner-gallery-img.png);
+  background-image: url("../img/banner-gallery-img.png");
   background-repeat: no-repeat;
   background-size: cover;
 }
@@ -519,7 +519,7 @@ input {
 }
 
 .building-realstate-img-big {
-  background-image: url(../img/logos/mota-machado-logo.png);
+  background-image: url("../img/logos/mota-machado-logo.png");
   background-repeat: no-repeat;
   background-size: contain;
   height: 100%;
