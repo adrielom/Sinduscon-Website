@@ -27,11 +27,11 @@
 
   <body>
     <!-- Tela 1 -->
-    <div class="container-fluid" id="screen1">
+    <div class="container-fluid h-100" id="screen1">
       <div class="banner row">
         <!-- Text One -->
         <div
-          class="col-md-12 col-lg-6 col-sm-12 h-xs-80 d-md-flex flex-md-column w-100 h-lg-100 h-md-40"
+          class="col-md-12 col-lg-6 col-sm-12 d-md-flex flex-md-column w-100 h-md-40"
         >
           <div class="container my-auto">
             <h2
@@ -83,10 +83,10 @@
 
     <!-- Tela 2 -->
     <div
-      class="container-fluid clearfix background-second-screen container-screen2"
+      class="container-fluid clearfix pb-5 mb-5 background-second-screen container-screen2"
     >
       <!-- Side Images -->
-      <div class="row">
+      <div class="row h-100">
         <img
           src="/img/blue-triangle.png"
           class="left-side-img-screen2 d-none d-md-block"
@@ -95,17 +95,16 @@
           src="/img/orange-triangle.png"
           class="right-side-img-screen2 d-none d-md-block"
         />
-        <div
-          class="col-md-12 mx-3 pt-5 blue-text justify-content-center screen2-title-display exoBoldItalic"
-        >
-          <span class="orange-text">22 A 25/NOV</span> RIOMAR FORTALEZA
+      </div>
+      <div class="row">
+        <div class="col-md-12 mx-3 py-5 blue-text text-center default-title exoBoldItalic">
+           <span class="orange-text">22 A 25/NOV</span> RIOMAR FORTALEZA
         </div>
       </div>
-
-      <div class="hex-container container-fluid pt-5 position-absolute">
+      <div class="row pt-5 h-100">
         <!-- ORANGE -->
 
-        <div class="orange-column pt-4">
+        <div class="orange-column col-12 pt-4">
           <div class="col-md-1"></div>
           <div
             class="col-md-9 d-flex align-items-center align-items-md-start flex-column flex-lg-row justify-content-lg-around"
@@ -138,7 +137,7 @@
 
         <!-- BLUE -->
 
-        <div class="blue-column ">
+        <div class="blue-column col-12 h-100">
           <div class="col-md-3"></div>
           <div
             class="col-md-9 h-lg-100 h-25 d-flex align-items-md-end align-items-center flex-column flex-lg-row justify-content-lg-around"
@@ -178,7 +177,7 @@
         <div class="col-lg-3"></div>
         <div class="col-lg-6">
           <p
-            class="text-center orange-text exoBoldItalic p-4 mt-3 screen3-title-display"
+            class="text-center orange-text exoBoldItalic p-4 mt-3 default-title"
           >
             VEJA OS DESTAQUES DO FEIRÃO.
             <span class="blue-text">PRONTO PARA MORAR JÁ.</span>
@@ -314,7 +313,7 @@
     </div>
 
     <!-- Tela 5 -->
-    <div class="embed-responsive embed-responsive-16by9">
+    <div class="embed-responsive position-relative embed-responsive-16by9">
       <div
         class="layer-video text-center text-white exoBoldItalic"
       >
@@ -738,9 +737,9 @@
       </div>
     </div>
     <!-- Tela 9 -->
-    <div id="map" class="container-fluid h-100">
+    <div id="map" class="position-relative container-fluid h-100">
       <div class="row">
-        <div class="col-12 embed-responsive embed-responsive-16by9">
+        <div class="col-12 embed-responsive embed-responsive-4by3">
           <iframe
             class="embed-responsive-item"
             src="https://embed.waze.com/pt-BR/iframe?zoom=20&lat=-3.7409461&lon=-38.4737499&pin=1"
@@ -748,17 +747,17 @@
             height="100%"
           ></iframe>
         </div>
-      </div>
-      <div id="info-map" class="row position-absolute d-lg-block">
-        <div
-          class="map-div d-lg-block d-none  pl-5 pt-5 blue-bg position-absolute p-3"
-        >
-          <p class="map-title text-white text-start exoBoldItalic">
-            <span class="orange-text">22 A 25/NOV</span> RIOMAR FORTALEZA
-          </p>
-          <p class="map-description text-white text-start exo">
-            R. Des. Lauro Nogueira, 1500 Papicu, Fortaleza - CE, 60175-055
-          </p>
+        <div id="info-map">
+          <div
+            class="map-div position-absolute pl-5 pt-5 blue-bg p-3"
+          >
+            <p class="map-title text-white text-start exoBoldItalic">
+              <span class="orange-text">22 A 25/NOV</span> RIOMAR FORTALEZA
+            </p>
+            <p class="map-description text-white text-start exo">
+              R. Des. Lauro Nogueira, 1500 Papicu, Fortaleza - CE, 60175-055
+            </p>
+          </div>
         </div>
       </div>
     </div>
@@ -798,7 +797,7 @@
               </button>
             </div>
           </div>
-          <div class="row  position-absolute">
+          <div class="row clearfix position-absolute">
             <div class="col-lg-3">
               <img
                 src="/img/left-arrow.png"

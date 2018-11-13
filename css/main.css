@@ -140,7 +140,7 @@ input {
 .map-div {
   width: 400px;
   height: 200px;
-  bottom: 400px;
+  bottom: 50%;
   left: 100px;
 }
 
@@ -173,7 +173,6 @@ input {
 }
 
 .hex-container {
-  height: 75%;
   margin: 0;
   padding: 0 0 0 3% !important;
   left: -5%;
@@ -186,7 +185,6 @@ input {
 
 .background-second-screen {
   background-color: #e7dfd2;
-  height: 100vh;
 }
 
 .left-side-img-screen2 {
@@ -203,7 +201,6 @@ input {
 .banner {
   background-image: url("../img/first-panel-bg.png");
   background-size: cover;
-  height: 100vh;
   background-repeat: no-repeat;
 }
 
@@ -240,24 +237,16 @@ input {
   text-align: center;
 }
 
-.screen2-title-display {
-  font-size: 2.8rem;
-  text-align: center;
-  margin-top: 25px;
-}
-
 .banner2 {
   background-color: rebeccapurple;
 }
 .orange-column {
-  position: relative;
   left: 10%;
 }
 
 .blue-column {
-  position: relative;
   left: 22%;
-  bottom: 20%;
+  bottom: 100px;
 }
 
 #simule-credito h2 {
@@ -594,11 +583,6 @@ input {
 
 /* Building block BIG end*/
 
-.screen3-title-display {
-  font-size: 2.5rem;
-  line-height: 2.4rem;
-}
-
 .orange-round-box {
   background-color: #f15a29;
 }
@@ -633,10 +617,6 @@ input {
   #days-missing span {
     font-size: 1.9rem !important;
   }
-
-  .background-second-screen {
-    height: 300vh;
-  }
 }
 
 @media screen and (max-width: 480px) {
@@ -646,19 +626,12 @@ input {
     margin: 0;
   }
 
-  .screen2-title-display {
-    font-size: 2rem !important;
-  }
   .default-title {
     font-size: 2rem !important;
   }
 
   .building-block-big {
     height: 300px;
-  }
-
-  .background-second-screen {
-    height: 200vh;
   }
 
   .blue-column {
