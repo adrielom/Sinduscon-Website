@@ -14,6 +14,21 @@ $(document).ready(function() {
   setInterval(function(e) {
     smallGallery(smallGalleryIndex);
   }, 3000);
+
+  $("#video").mouseover(function() {
+    $(".layer-video").hide();
+  });
+  $("#video").mouseleave(function() {
+    $(".layer-video").show();
+  });
+
+  $("#map").mouseover(function() {
+    $("#info-map").hide();
+  });
+
+  $("#map").mouseleave(function() {
+    $("#info-map").show();
+  });
 });
 
 function populateListOfBuildings() {
