@@ -540,7 +540,8 @@ input {
 .building-img-big {
   height: 100%;
   width: 50%;
-  background-color: orange;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .testimonial-text {
@@ -570,14 +571,14 @@ input {
 }
 
 .building-info-big {
-  width: 55%;
+  width: 50%;
   padding: 0 10%;
 }
 .schedule-visit-btn-big {
   padding-top: 2%;
   background-color: #736458;
   border-radius: 0 !important;
-  font-size: 0.8rem !important;
+  font-size: 1.3rem !important;
   height: 15%;
   border: none;
   margin: 5% 0 5% 5%;
