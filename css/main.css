@@ -119,6 +119,30 @@ input {
   background-size: cover;
 }
 
+#logo-screen10 {
+  height: 100%;
+  width: 250px;
+}
+
+.map-description {
+  width: 85%;
+  line-height: 1.1rem;
+  font-size: 1.1rem;
+}
+
+.map-title {
+  font-size: 1.7rem;
+  line-height: 1.5rem;
+  width: 75%;
+}
+
+.map-div {
+  width: 400px;
+  height: 200px;
+  bottom: 400px;
+  left: 100px;
+}
+
 .default-title {
   font-size: 3rem;
 }
@@ -426,7 +450,8 @@ input {
 .building-img {
   height: 100%;
   width: 200px;
-  background-color: orange;
+  background-repeat: no-repeat;
+  background-size: contain;
 }
 
 .building-realstate-logo-container {
@@ -448,7 +473,7 @@ input {
 }
 
 .building-realstate-img {
-  background-image: url(../img/mota-machado-logo.png);
+  background-image: url(../img/logos/mota-machado-logo.png);
   background-repeat: no-repeat;
   background-size: contain;
   height: 100%;
@@ -469,6 +494,100 @@ input {
 }
 
 /* Building block display end*/
+
+/* BUILDING BLOCK BIG */
+
+.building-block-big {
+  background-color: #e7dfd2;
+  height: 100%;
+  width: 80%;
+}
+
+.screen10-bg {
+  background-image: url(/img/banner-gallery-img.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.building-realstate-logo-container-big {
+  height: 200px;
+  width: 100%;
+}
+
+.building-realstate-img-big {
+  background-image: url(../img/logos/mota-machado-logo.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  height: 100%;
+}
+
+.building-title-big {
+  margin-top: 5%;
+  margin-left: 5%;
+  line-height: 2.4rem;
+  font-size: 2.3rem;
+  width: 40%;
+}
+
+.building-description-big {
+  margin-top: 5%;
+  margin-left: 5%;
+
+  line-height: 1.6rem;
+  font-size: 1.7rem;
+}
+
+.building-img-big {
+  height: 100%;
+  width: 50%;
+  background-color: orange;
+}
+
+.testimonial-text {
+  line-height: 1.2rem;
+  font-size: 1rem;
+}
+
+.testimonial-author {
+  line-height: 0.8rem;
+  font-size: 0.8rem;
+  width: 65%;
+}
+
+.building-realstate-logo-container-big {
+  height: 200px;
+  width: 100%;
+}
+
+.btn-left {
+  left: -95px;
+  top: 150px;
+}
+
+.btn-right {
+  right: -95px;
+  top: 150px;
+}
+
+.building-info-big {
+  width: 55%;
+  padding: 0 10%;
+}
+.schedule-visit-btn-big {
+  padding-top: 2%;
+  background-color: #736458;
+  border-radius: 0 !important;
+  font-size: 0.8rem !important;
+  height: 15%;
+  border: none;
+  margin: 5% 0 5% 5%;
+}
+
+.blue-border {
+  border: 4px solid #144372;
+}
+
+/* Building block BIG end*/
 
 .screen3-title-display {
   font-size: 2.5rem;
@@ -524,6 +643,13 @@ input {
 
   .screen2-title-display {
     font-size: 2rem !important;
+  }
+  .default-title {
+    font-size: 2rem !important;
+  }
+
+  .building-block-big {
+    height: 300px;
   }
 
   .background-second-screen {
