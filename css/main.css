@@ -83,6 +83,46 @@ input {
   margin: 20px;
 }
 
+.block-space {
+  height: 340px;
+  width: 100%;
+}
+
+#photo-1 {
+  background-image: url(/img/photo-1.png);
+}
+#photo-2 {
+  background-image: url(/img/photo-2.png);
+}
+#photo-3 {
+  background-image: url(/img/photo-3.png);
+}
+#photo-4 {
+  background-image: url(/img/photo-4.png);
+}
+#photo-5 {
+  background-image: url(/img/photo-5.png);
+}
+#photo-6 {
+  background-image: url(/img/photo-6.png);
+}
+
+.default-title {
+  font-size: 3rem;
+}
+
+.blue-bg {
+  background-color: #144372;
+}
+
+.light-blue-bg {
+  background-color: #00aeef;
+}
+
+.orange-bg {
+  background-color: #f15a29;
+}
+
 .border-img {
   border: 1px solid black;
 }
