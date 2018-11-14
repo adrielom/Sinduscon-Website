@@ -26,13 +26,19 @@
   </head>
 
   <body>
+    
+    <!-- Scroll top button -->
+    <button onclick="topFunction()" id="toTop" title="Go to top"><i class="fas fa-arrow-up"></i></button> 
+
     <!-- Tela 1 -->
     <div class="container-fluid h-100" id="screen1">
-      <div class="banner row">
+      <div class="banner row p-3">
         <!-- Text One -->
         <div
           class="col-md-12 mt-5 col-lg-6 col-sm-12 d-md-flex flex-md-column w-100"
         >
+          <div class="row pb-lg-5"></div>
+          <div class="row pb-lg-5"></div>
           <div class="container my-auto">
             <h2
               class="text-uppercase mx-auto text-white exoBoldItalic mb-md-5"
@@ -52,11 +58,16 @@
 
             </div>
           </div>
+          <div class="row pb-lg-5"></div>
+          <div class="row pb-lg-5"></div>
+
         </div>
+
+        <div class="col-lg-2"></div>
 
         <!-- Image logo -->
         <div
-          class="col-md-12 col-sm-12 col-lg-6 h-xs-20 w-100 h-md-40 h-lg-100 my-auto justify-content-center align-items-center d-flex flex-column"
+          class="col-md-12 col-sm-12 col-lg-4 h-xs-20 w-100 h-md-40 h-lg-100 my-auto justify-content-center align-items-center d-flex flex-column"
         >
           <img
             class="img-fluid align-self-center logo-banner mb-md-4"
@@ -68,6 +79,10 @@
             >morar<span class="orange-text">já</span>
           </p>
         </div>
+        <div class="row pb-lg-5"></div>
+        <div class="row pb-lg-5"></div>
+        <div class="row pb-lg-5"></div>
+        <div class="row pb-lg-5"></div>
       </div>
     </div>
 
@@ -164,8 +179,8 @@
     <!-- Tela 3 -->
     <div class="container-fluid h-100">
       <div class="row">
-        <div class="col-lg-3"></div>
-        <div class="col-lg-6">
+        <div class="col-lg-2"></div>
+        <div class="col-lg-8">
           <p
             class="text-center orange-text exoBoldItalic p-4 mt-3 default-title"
           >
@@ -173,7 +188,7 @@
             <span class="blue-text">PRONTO PARA MORAR JÁ.</span>
           </p>
         </div>
-        <div class="col-lg-3"></div>
+        <div class="col-lg-2"></div>
       </div>
       <div class="row mb-5 ">
         <div
@@ -258,6 +273,21 @@
       </div>
     </div>
 
+    <!-- Spacing Button goes to list -->
+    <div class="conainer h-100">
+      <div class="row blue-bg" id="back-top">
+          <div class="col-12 p-5 text-center">
+            <div id="go-to-list-btn" class="btn px-5 light-blue-bg">
+                <a
+                href="#all-offers"
+                class="text-white mx-auto text-uppercase nounderline text-center exoBoldItalic secondary-title"
+                >veja todas as ofertas do feirão</a
+                >
+            </div>
+          </div>
+        </div>
+    </div>
+
     <!-- Tela 4 -->
     <div class="container-fluid h-100 screen4-background">
       <div class="row">
@@ -325,15 +355,7 @@
         ASSISTA O COMERCIAL E ENTRE NO CLIMA DO MAIOR FEIRÃO DE IMÓVEIS QUE VOCÊ
         JÁ VIU.
       </div>
-      <iframe
-        id="video"
-        width="1349"
-        height="524"
-        src="https://www.youtube.com/embed/xbhCPt6PZIU"
-        frameborder="0"
-        allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-        allowfullscreen
-      ></iframe>
+      <iframe width="1349" height="524" src="https://www.youtube.com/embed/2ypzomq0Khg" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
     </div>
 
     <!-- Tela 6 -->
@@ -766,7 +788,7 @@
     <!-- Tela 9 -->
     <div id="map" class="position-relative container-fluid h-100">
       <div class="row">
-        <div class="col-12 embed-responsive embed-responsive-4by3">
+        <div class="col-12 embed-responsive embed-responsive-21by9">
           <iframe
             class="embed-responsive-item"
             src="https://embed.waze.com/pt-BR/iframe?zoom=20&lat=-3.7409461&lon=-38.4737499&pin=1"
@@ -790,7 +812,7 @@
     </div>
 
     <!-- Tela 10 -->
-    <div class="container-fluid screen10-bg h-100 pb-5">
+    <div id="tela-10" class="container-fluid screen10-bg h-100 pb-5">
       <div class="row p-3 mb-5">
         <div class="col-12 d-flex flew-nowrap justify-content-center">
           <img
@@ -845,7 +867,8 @@
     </div>
 
     <!-- Tela 11 -->
-    <div class="container-fluid h-100">
+    <div id="all-offers" class="container-fluid h-100">
+      <!--  
       <div class="row p-5 blue-bg">
         <div class="col-12">
           <p class="text-white exoBoldItalic default-title text-center">
@@ -853,6 +876,7 @@
           </p>
         </div>
       </div>
+      -->
       <div class="row p-5">
         <div class="col-12">
           <p class="orange-text exoBoldItalic default-title text-center">
@@ -893,6 +917,7 @@
 
     <!-- Tela 12 -->
     <div class="container-fluid h-100">
+      <!-- 
       <div class="row blue-bg" id="back-top">
         <div class="col-12 p-5 text-center">
           <a
@@ -902,6 +927,7 @@
           >
         </div>
       </div>
+       -->
       <div class="row">
         <div class="col-12 p-5">
           <p class="blue-text text-center exoBoldItalic default-title">

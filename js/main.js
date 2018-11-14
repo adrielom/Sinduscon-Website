@@ -4,6 +4,8 @@ $(document).ready(function() {
   settingBigImage();
   countDown();
 
+  $("#tela-10").hide();
+
   //buttons functionalities
   $("#left-arrow").click(() => {
     leftButton();
@@ -96,12 +98,36 @@ function populateListOfBuildings() {
 
 //lists of all buildings objects
 let list_of_buildings = [
-  new Building("../img/predios/predio1.jpg", "Condominio Maraponga", "2 quartos | 45m<sup>2</sup> | Condomínio: R$:200"),
-  new Building("../img/predios/predio2.jpg", "Condominio Centro", "4 quartos | 90m<sup>2</sup> | Condomínio: R$:530"),
-  new Building("../img/predios/predio3.jpg", "Residencial Aldeota", "2 quartos | 65m<sup>2</sup> | Condomínio: R$:780"),
-  new Building("../img/predios/predio4.jpg", "Prédio Papicu", "4 quartos | 90m<sup>2</sup> | Condomínio: R$:530"),
-  new Building("../img/predios/predio5.jpg", "Residencial Passaré", "3 quartos | 74m<sup>2</sup> | Condomínio: R$:340"),
-  new Building("../img/predios/predio6.jpg", "Residencial Passaré", "2 quartos | 67m<sup>2</sup> | Condomínio: R$:740")
+  new Building(
+    "../img/predios/predio1.jpg",
+    "Condominio Maraponga",
+    "2 quartos | 45m<sup>2</sup> | Condomínio: R$:200"
+  ),
+  new Building(
+    "../img/predios/predio2.jpg",
+    "Condominio Centro",
+    "4 quartos | 90m<sup>2</sup> | Condomínio: R$:530"
+  ),
+  new Building(
+    "../img/predios/predio3.jpg",
+    "Residencial Aldeota",
+    "2 quartos | 65m<sup>2</sup> | Condomínio: R$:780"
+  ),
+  new Building(
+    "../img/predios/predio4.jpg",
+    "Prédio Papicu",
+    "4 quartos | 90m<sup>2</sup> | Condomínio: R$:530"
+  ),
+  new Building(
+    "../img/predios/predio5.jpg",
+    "Residencial Passaré",
+    "3 quartos | 74m<sup>2</sup> | Condomínio: R$:340"
+  ),
+  new Building(
+    "../img/predios/predio6.jpg",
+    "Residencial Passaré",
+    "2 quartos | 67m<sup>2</sup> | Condomínio: R$:740"
+  )
 ];
 
 //building class
@@ -204,4 +230,18 @@ function smallGallery(e) {
   if (smallGalleryIndex > 2) {
     smallGalleryIndex = 0;
   }
+}
+
+window.onscroll = function() {
+  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+    document.querySelector("#toTop").style.display = "block";
+  } else {
+    document.querySelector("#toTop").style.display = "none";
+  }
+};
+
+// When the user clicks on the button, scroll to the top of the document
+function topFunction() {
+  document.body.scrollTop = 0; // For Safari
+  document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
 }
