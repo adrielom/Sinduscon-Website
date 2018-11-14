@@ -30,12 +30,17 @@ $(document).ready(function() {
 
   $("#map").mouseleave(function() {
     $("#info-map").show();
+    $("#map iframe").css("pointer-events", "none");
+  });
+
+  $("#map").click(function() {
+    $("#map iframe").css("pointer-events", "auto");
   });
 });
 
 function countDown() {
   // Set the date we're counting down to
-  var countDownDate = new Date("Nov 22, 2018 13:00:00").getTime();
+  var countDownDate = new Date("Nov 22, 2018 10:00:00").getTime();
 
   // Update the count down every 1 second
   var x = setInterval(function() {
@@ -54,10 +59,10 @@ function countDown() {
     var seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
     // Display the result in the element with id="days-missing span"
-    let dm = document.querySelector("#days-missing span");
+    let dm = document.querySelector("#days-missing p");
     dm.textContent = days + " dias";
     let hm = document.querySelector("#hours-missing");
-    hm.textContent = hours + "H " + minutes + "m " + seconds + "s ";
+    hm.textContent = hours + "h " + minutes + "m " + seconds + "s ";
 
     // If the count down is finished, write some text
     if (distance < 0) {
@@ -91,41 +96,12 @@ function populateListOfBuildings() {
 
 //lists of all buildings objects
 let list_of_buildings = [
-  new Building(
-    "../img/photo-5.png",
-    "tá",
-    "insira aqui um grande texto. Se for maior será que quebra?"
-  ),
-  new Building(
-    "../img/photo-4.png",
-    "funcionando",
-    "insira aqui um grande texto. Se for maior será que quebra?"
-  ),
-  new Building(
-    "../img/photo-1.png",
-    "Dan",
-    "insira aqui um grande texto. Se for maior será que quebra?"
-  ),
-  new Building(
-    "../img/photo-2.png",
-    "tudo",
-    "insira aqui um grande texto. Se for maior será que quebra?"
-  ),
-  new Building(
-    "../img/photo-6.png",
-    "bem",
-    "insira aqui um grande texto. Se for maior será que quebra?"
-  ),
-  new Building(
-    "../img/photo-3.png",
-    "dinamico",
-    "insira aqui um grande texto. Se for maior será que quebra?"
-  ),
-  new Building(
-    "../img/photo-2.png",
-    "xD",
-    "insira aqui um grande texto. Se for maior será que quebra?"
-  )
+  new Building("../img/predios/predio1.jpg", "Condominio Maraponga", "2 quartos | 45m<sup>2</sup> | Condomínio: R$:200"),
+  new Building("../img/predios/predio2.jpg", "Condominio Centro", "4 quartos | 90m<sup>2</sup> | Condomínio: R$:530"),
+  new Building("../img/predios/predio3.jpg", "Residencial Aldeota", "2 quartos | 65m<sup>2</sup> | Condomínio: R$:780"),
+  new Building("../img/predios/predio4.jpg", "Prédio Papicu", "4 quartos | 90m<sup>2</sup> | Condomínio: R$:530"),
+  new Building("../img/predios/predio5.jpg", "Residencial Passaré", "3 quartos | 74m<sup>2</sup> | Condomínio: R$:340"),
+  new Building("../img/predios/predio6.jpg", "Residencial Passaré", "2 quartos | 67m<sup>2</sup> | Condomínio: R$:740")
 ];
 
 //building class

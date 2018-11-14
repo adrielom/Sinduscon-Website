@@ -31,36 +31,26 @@
       <div class="banner row">
         <!-- Text One -->
         <div
-          class="col-md-12 col-lg-6 col-sm-12 d-md-flex flex-md-column w-100 h-md-40"
+          class="col-md-12 mt-5 col-lg-6 col-sm-12 d-md-flex flex-md-column w-100"
         >
           <div class="container my-auto">
             <h2
               class="text-uppercase mx-auto text-white exoBoldItalic mb-md-5"
               id="title-banner1"
             >
-              Venha para o maior feirão de imóveis que você já viu.
+              o maior feirão de casas, lotes e apartamentos que você já viu.
             </h2>
-
-            <div class="d-flex justify-content-center mb-2">
-              <div class="white-bg-rounded mr-5">
-                <div class="days-left">
-                  <div class="col-md-9">
-                    <h2
-                      class="text-uppercase exoBoldItalic blue-text"
-                      id="days-missing"
-                    >
-                      faltam <span class="orange-text">12 dias</span>
-                    </h2>
-                  </div>
-                </div>
+            <div class="row mx-auto">
+              <div class="col-lg-2 col-12 p-0"></div>
+              <div class="col-12 text-lg-start mx-auto col-lg-4 p-lg-0 px-5 mr-2">
+                  <h2 class="text-uppercase exoBoldItalic  yellow-text" id="days-missing">faltam <p class=" yellow-text">12 dias</p></h2>
               </div>
-              <div class="moving-circle"></div>
-              <div class="circle"></div>
-            </div>
+              <div class="col-12 text-lg-start mx-auto col-lg-4 p-lg-0 px-5 d-flex align-items-end pb-lg-4">
+                  <h2 id="hours-missing" class="timer-display yellow-text exoBoldItalic">120:32:15h</h2>
+              </div>
+              <div class="col-lg-2"></div>
 
-            <h2 id="hours-missing" class="timer-display text-white exoBoldItalic mr-5">
-              120:32:15h
-            </h2>
+            </div>
           </div>
         </div>
 
@@ -280,20 +270,35 @@
           </p>
         </div>
       </div>
-      <div class="row mt-lg-5 mb-lg-5">
-        <div class="col-lg-3"></div>
+      <div class="row mt-lg-5">
+        <div class="col-lg-2"></div>
         <div
-          class="col-12 mb-5 col-lg-6 d-flex flex-lg-row flex-column justify-content-lg-around  justify-content-md-around align-items-center align-items-lg-center"
+          class="col-12 mb-5 px-5 col-lg-8 d-flex flex-lg-row flex-wrap flex-column justify-content-lg-between  justify-content-center align-items-center align-items-lg-center"
         >
           <div class="form-group">
             <label
+              for="nome-input"
+              class="text-uppercase input-label text-white exo"
+              >Nome:</label
+            >
+            <input type="email" class="form-control" id="nome-input" />
+          </div>
+          <div class="form-group">
+            <label
               for="email-input"
-              id="email-input-label"
-              class="text-uppercase text-white exo"
+              class="input-label text-uppercase text-white exo"
               >Seu email:</label
             >
             <input type="email" class="form-control" id="email-input" />
           </div>
+          <div class="form-group">
+              <label
+                for="phone-input"
+                class="text-uppercase input-label text-white exo"
+                >Telefone:</label
+              >
+              <input type="number" id="phone-input" class="form-control"/>
+            </div>
           <button
             type="button"
             class="btn-accent-color text-white exoBoldItalic text-uppercase"
@@ -302,7 +307,7 @@
             cadastrar
           </button>
         </div>
-        <div class="col-lg-3"></div>
+        <div class="col-lg-2"></div>
       </div>
       <div class="row position-relative">
         <img
@@ -707,14 +712,36 @@
           ></div>
           <div
             class="col-lg-3 col-md-6 col-xs-12 p-0 block-space light-blue-bg"
-          ></div>
+          >
+             <p class="exoItalic testimonial-text text-white px-5 pt-5 w-80">
+                "Criamos o Feirão do Sinduscon para mostrar a força do mercado
+                imobiliário cearense. É uma prova viva da união do setor produtivo
+                responsável por uma imensa quantidade de empregos no país e em
+                particular no Ceará. Este é o primeiro e já é um sucesso! A ideia
+                é torná-lo parte do calendário de eventos do estado."
+              </p>
+              <p class="exoItalic testimonial-author text-white pl-5">
+                André Montenegro Presidente Sinduscon
+              </p>
+          </div>
           <div
             class="col-lg-3 col-md-6 order-lg-3 order-md-4 order-sm-4 col-xs-12 p-0 block-space"
             id="photo-6"
           ></div>
           <div
             class="col-lg-3 col-md-6 order-lg-4 col-xs-12 p-0 block-space orange-bg"
-          ></div>
+          >
+            <p class="exoItalic testimonial-text text-white px-5 pt-5 w-80">
+              "Criamos o Feirão do Sinduscon para mostrar a força do mercado
+              imobiliário cearense. É uma prova viva da união do setor produtivo
+              responsável por uma imensa quantidade de empregos no país e em
+              particular no Ceará. Este é o primeiro e já é um sucesso! A ideia
+              é torná-lo parte do calendário de eventos do estado."
+            </p>
+            <p class="exoItalic testimonial-author text-white pl-5">
+              André Montenegro Presidente Sinduscon
+            </p>
+          </div>
         </div>
       </div>
     </div>
@@ -773,7 +800,7 @@
           />
         </div>
       </div>
-      <div class="row">
+      <div class="row position-relative">
         <div class="col-12 justify-content-center d-flex">
           <div
             id="big-building"
@@ -797,25 +824,23 @@
               </button>
             </div>
           </div>
-          <div class="row clearfix position-absolute">
-            <div class="col-lg-3">
-              <img
-                src="/img/left-arrow.png"
-                id="left-arrow"
-                class="btn-left img-fluid position-relative"
-              />
-            </div>
-            <div class="col-lg-3"></div>
-            <div class="col-lg-3"></div>
-            <div class="col-lg-3">
-              <img
-                src="/img/right-arrow.png"
-                id="right-arrow"
-                class="btn-right img-fluid position-relative"
-              />
-            </div>
-          </div>
         </div>
+        <div class="col-lg-3">
+            <img
+              src="/img/left-arrow.png"
+              id="left-arrow"
+              class="btn-left img-fluid position-absolute"
+            />
+          </div>
+          <div class="col-lg-3"></div>
+          <div class="col-lg-3"></div>
+          <div class="col-lg-3">
+            <img
+              src="/img/right-arrow.png"
+              id="right-arrow"
+              class="btn-right img-fluid position-absolute"
+            />
+          </div>
       </div>
     </div>
 
