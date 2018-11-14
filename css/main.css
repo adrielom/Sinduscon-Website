@@ -246,7 +246,7 @@ input {
 }
 
 .timer-display {
-  font-size: 2rem;
+  font-size: 1.9rem;
 }
 
 .banner2 {
@@ -600,26 +600,28 @@ input {
 
 /* Building block BIG end*/
 
+/* Mobile Screens */
+
+#mobile-hashtag {
+  position: absolute;
+  font-size: 1.3rem;
+  right: 10px;
+}
+
+/* Mobile Screens*/
+
+.secondary-bg {
+  background-color: #e7dfd2;
+}
+
 .orange-round-box {
   background-color: #f15a29;
 }
 
-@media screen and (max-width: 769px) {
-  #title-banner1 {
-    font-size: 2.5rem !important;
-    margin-top: 25%;
-    margin-bottom: 5%;
-  }
-
-  #days-missing {
-    width: 65%;
-  }
-}
-
 @media screen and (max-width: 320px) and (max-height: 480px) {
-  #title-banner1 h2 {
-    line-height: 0.2rem !important;
-    font-size: 0.3rem !important;
+  .hex-container {
+    margin: 0;
+    padding: 0 !important;
   }
 }
 
@@ -653,11 +655,15 @@ input {
   }
 
   #title-banner1 {
-    font-size: 2.1rem !important;
-    line-height: 2.3rem !important;
-    margin-top: 5% !important;
+    font-size: 2.3rem !important;
+    line-height: 2.2rem !important;
+    margin-top: 2% !important;
     padding-top: 5%;
     margin-bottom: 10%;
+  }
+
+  #days-missing {
+    font-size: 1.4rem !important;
   }
 }
 
@@ -665,16 +671,18 @@ input {
   .blue-column {
     top: -75%;
   }
-  #title-banner1 {
-    margin-top: 0 !important;
-    padding-top: 15%;
+}
+
+@media screen and (max-width: 769px) {
+  #days-missing {
+    width: 65%;
   }
 }
 
 #title-banner1 {
   width: 72%;
-  font-size: 3.2rem;
-  line-height: 3.5rem;
+  font-size: 3rem;
+  line-height: 3rem;
 }
 
 #days-missing {

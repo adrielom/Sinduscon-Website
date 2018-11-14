@@ -43,6 +43,7 @@ $(document).ready(function() {
 function countDown() {
   // Set the date we're counting down to
   var countDownDate = new Date("Nov 22, 2018 10:00:00").getTime();
+  var finishDate = new Date("Nov 26, 2018 10:00:00").getTime();
 
   // Update the count down every 1 second
   var x = setInterval(function() {
@@ -64,13 +65,24 @@ function countDown() {
     let dm = document.querySelector("#days-missing p");
     dm.textContent = days + " dias";
     let hm = document.querySelector("#hours-missing");
-    hm.textContent = hours + "h " + minutes + "m " + seconds + "s ";
+    if (days < 10) {
+      hm.style.paddingLeft = "15px";
+      hm.textContent = hours + "h " + minutes + "m " + seconds + "s ";
+    } else {
+      hm.textContent = hours + "h " + minutes + "m " + seconds + "s ";
+    }
+    let falta = document.querySelector("#days-missing");
 
     // If the count down is finished, write some text
     if (distance < 0) {
       clearInterval(x);
-      dm.textContent = "Venha para o feirão!";
-      hm.textContent = "Agora!";
+      dm.textContent = "";
+      hm.textContent = "";
+      if (finishDate - now < 0) {
+        falta.textContent = "O feirão acabou.";
+      } else {
+        falta.textContent = "Já começou! Venha para o feirão!";
+      }
     }
   }, 1000);
 }

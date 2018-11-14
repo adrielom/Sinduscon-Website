@@ -30,6 +30,28 @@
     <!-- Scroll top button -->
     <button onclick="topFunction()" id="toTop" title="Go to top"><i class="fas fa-arrow-up"></i></button> 
 
+    <!-- Tela 1 - Mobile -->
+    <div id="mobile-header" class="container-fluid h-100 d-lg-none d-md-none">
+        <div class="row p-2 secondary-bg">
+          <div class="col-sm-2 col-xs-2  w-25">
+            <img class="img-fluid" src="/img/sinduscon-logo.png">
+          </div>
+          <div class="col-sm-1 p-0 col-xs-2 w-25">
+            <div class="h-50"></div>
+            <div class="h-50 mb-2 w-75">
+              <img class="img-fluid" src="/img/logos/Diário_do_Nordeste_logo.png">
+            </div>
+          </div>
+          <div class="col-sm-10 position-relative p-0 w-50 d-flex justify-content-center mt-3 flex-column">
+              <p id="mobile-hashtag" class="blue-text text-center exoBoldItalic">
+                  <span class="orange-text">#</span>pronto<span class="orange-text"
+                    >pra</span
+                  >morar<span class="orange-text">já</span>
+                </p>
+          </div>
+        </div>
+    </div>
+
     <!-- Tela 1 -->
     <div class="container-fluid h-100" id="screen1">
       <div class="banner row p-3">
@@ -47,11 +69,11 @@
               o maior feirão de casas, lotes e apartamentos que você já viu.
             </h2>
             <div class="row mx-auto">
-              <div class="col-lg-2 col-12 p-0"></div>
-              <div class="col-12 text-lg-start mx-auto col-lg-4 p-lg-0 px-5 mr-2">
+              <div class="col-lg-2  col-2 p-0"></div>
+              <div class="col-12 col-sm-8 text-lg-start mx-auto col-lg-4 p-lg-0 px-5 mr-2">
                   <h2 class="text-uppercase exoBoldItalic  yellow-text" id="days-missing">faltam <p class=" yellow-text">12 dias</p></h2>
               </div>
-              <div class="col-12 text-lg-start mx-auto col-lg-4 p-lg-0 px-5 d-flex align-items-end pb-lg-4">
+              <div class="col-12 col-sm-8 text-lg-start mx-auto col-lg-4 p-lg-0 px-5 d-flex align-items-end pb-lg-4">
                   <h2 id="hours-missing" class="timer-display yellow-text exoBoldItalic">120:32:15h</h2>
               </div>
               <div class="col-lg-2"></div>
@@ -66,14 +88,14 @@
         <div class="col-lg-2"></div>
 
         <!-- Image logo -->
-        <div
-          class="col-md-12 col-sm-12 col-lg-4 h-xs-20 w-100 h-md-40 h-lg-100 my-auto justify-content-center align-items-center d-flex flex-column"
+        <div id="screen1-logo-div"
+          class="col-md-12 col-lg-4 w-100 h-md-40 h-lg-100 my-auto justify-content-center align-items-center d-flex flex-column"
         >
           <img
-            class="img-fluid align-self-center logo-banner mb-md-4"
+            class="d-none d-lg-block img-fluid align-self-center logo-banner mb-md-4"
             src="img/sinduscon-logo.png"
           />
-          <p class="blue-text hashtag">
+          <p class="d-none d-lg-block blue-text hashtag">
             <span class="orange-text">#</span>pronto<span class="orange-text"
               >pra</span
             >morar<span class="orange-text">já</span>
@@ -112,7 +134,7 @@
         <div class="orange-column col-12 pt-4">
           <div class="col-md-1"></div>
           <div
-            class="col-md-9 d-flex align-items-center align-items-md-start flex-column flex-lg-row justify-content-lg-around"
+            class="col-md-9 d-flex align-items-center align-items-md-start flex-column flex-lg-row justify-content-sm-center justify-content-lg-around"
           >
             <div class="hex position-relative" id="imoveis-prontos">
               <div class="hex-mid orange-hex">
@@ -373,7 +395,7 @@
       </div>
       <div class="row mt-5 mb-5">
         <!-- marcas linha 1 -->
-        <div class="col-lg-12 d-flex mb-4 flex-row  justify-content-between">
+        <div class="col-lg-12 col-sm-4 d-flex mb-4 flex-lg-row justify-content-center justify-content-lg-between">
           <div class="marca-container">
             <div
               class="marca-img"
@@ -645,6 +667,7 @@
           <div class="marca-container"><div class="marca-img "></div></div>
         </div>
       </div>
+      
     </div>
 
     <!-- Tela 7 -->
