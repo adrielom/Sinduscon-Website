@@ -2,7 +2,9 @@ $(document).ready(function() {
   //starting Stuff
   populateListOfBuildings();
   settingBigImage();
+  countDown();
 
+  //buttons functionalities
   $("#left-arrow").click(() => {
     leftButton();
   });
@@ -30,6 +32,41 @@ $(document).ready(function() {
     $("#info-map").show();
   });
 });
+
+function countDown() {
+  // Set the date we're counting down to
+  var countDownDate = new Date("Nov 22, 2018 13:00:00").getTime();
+
+  // Update the count down every 1 second
+  var x = setInterval(function() {
+    // Get todays date and time
+    var now = new Date().getTime();
+
+    // Find the distance between now and the count down date
+    var distance = countDownDate - now;
+
+    // Time calculations for days, hours, minutes and seconds
+    var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+    var hours = Math.floor(
+      (distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
+    );
+    var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+    var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+    // Display the result in the element with id="days-missing span"
+    let dm = document.querySelector("#days-missing span");
+    dm.textContent = days + " dias";
+    let hm = document.querySelector("#hours-missing");
+    hm.textContent = hours + "H " + minutes + "m " + seconds + "s ";
+
+    // If the count down is finished, write some text
+    if (distance < 0) {
+      clearInterval(x);
+      dm.textContent = "Venha para o feirão!";
+      hm.textContent = "Agora!";
+    }
+  }, 1000);
+}
 
 function populateListOfBuildings() {
   //selects parent container
