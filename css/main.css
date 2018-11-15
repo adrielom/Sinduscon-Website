@@ -73,11 +73,6 @@ label {
   width: 395px !important;
 }
 
-input {
-  border-radius: 0 !important;
-  height: 3.3rem;
-}
-
 #receba-informacoes {
   font-size: 3rem;
 }
@@ -566,6 +561,10 @@ input {
   background-color: #144372; /* Add a dark-grey background on hover */
 }
 
+#days-missing p {
+  font-size: 4rem;
+}
+
 .btn-left {
   left: 30px;
   top: 50%;
@@ -618,6 +617,11 @@ input {
   background-color: #f15a29;
 }
 
+.horizontal-scroll {
+  overflow-x: none;
+  white-space: wrap;
+}
+
 @media screen and (max-width: 320px) and (max-height: 480px) {
   .hex-container {
     margin: 0;
@@ -627,9 +631,22 @@ input {
 
 @media screen and (max-width: 480px) {
   .timer-display {
-    font-size: 2.5rem;
+    font-size: 1.3rem;
     text-align: center;
     margin: 0;
+    right: 70%;
+    bottom: 25%;
+    width: 100%;
+    position: absolute;
+  }
+
+  .map iframe {
+    height: 200%;
+  }
+
+  .horizontal-scroll {
+    overflow-x: auto;
+    white-space: wrap;
   }
 
   .default-title {
@@ -662,8 +679,24 @@ input {
     margin-bottom: 10%;
   }
 
+  .input-label {
+    width: 300px !important;
+  }
+
+  #cadastrar-button {
+    width: 300px;
+  }
+
+  .secondary-title {
+    font-size: 0.8rem !important;
+  }
+
   #days-missing {
     font-size: 1.4rem !important;
+  }
+
+  #days-missing p {
+    font-size: 3rem !important;
   }
 }
 
@@ -675,7 +708,7 @@ input {
 
 @media screen and (max-width: 769px) {
   #days-missing {
-    width: 65%;
+    width: 100%;
   }
 }
 
@@ -691,10 +724,6 @@ input {
 
 .yellow-text {
   color: yellow;
-}
-
-#days-missing p {
-  font-size: 4.1rem !important;
 }
 
 /* Fonts */
