@@ -1,7 +1,6 @@
 $(document).ready(function() {
   //starting Stuff
   populateListOfBuildings();
-  settingBigImage();
   countDown();
 
   $("#tela-10").hide();
@@ -37,6 +36,23 @@ $(document).ready(function() {
 
   $("#map").click(function() {
     $("#map iframe").css("pointer-events", "auto");
+  });
+
+  $(".schedule-visit-btn").click(function() {
+    let title = $(this)
+      .siblings(".building-title")
+      .text();
+    let description = $(this)
+      .siblings(".building-description")
+      .text();
+    let image = $(this)
+      .parent()
+      .siblings(".building-img")
+      .css("background-image")
+      .replace(/^url|[\(\)]/g, "");
+    let aux = new Building(image, title, description);
+
+    settingBigImage(aux);
   });
 });
 
@@ -152,9 +168,9 @@ function Building(image, title, description) {
 //Random value that's going to go up and down according to inputs - sets big image
 let bigImageIndex = Math.floor(Math.random() * list_of_buildings.length);
 
-function settingBigImage() {
-  let bigBuilding = document.querySelector("#big-building");
-  settingBuildings(bigBuilding, bigImageIndex);
+function settingBigImage(obj) {
+  let bigBuilding = document.querySelector("#agendarModal");
+  settingBigBuildings(bigBuilding, obj);
 }
 
 function settingBuildings(b, index) {
@@ -167,6 +183,17 @@ function settingBuildings(b, index) {
 
   //sets the description of a specific object
   b.children[1].children[2].innerHTML = list_of_buildings[index].description;
+}
+
+function settingBigBuildings(b, obj) {
+  //sets the image of a specific object
+  b.children[0].style.backgroundImage = "url(" + obj.image + ")";
+
+  //sets the title of a specific object
+  b.children[1].children[0].innerHTML = obj.title;
+
+  //sets the description of a specific object
+  b.children[1].children[1].innerHTML = obj.description;
 }
 
 //goes up the list - resets after reachign the edge

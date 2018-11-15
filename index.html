@@ -27,6 +27,66 @@
 
   <body>
     
+    <!-- Modal PopUp -->
+  <div class="modal fade" id="agendarVisitaModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-body pb-5">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            <div id="agendarModal"
+            class="building-block-big p-sm-5 aling-items-lg-center h-100 w-100 d-flex flex-lg-column flex-sm-row flex-wrap shadow mb-5 pr-lg-0 mb-lg-0"
+          >
+            <div class="building-img-modal" style="background-image: url('/img/predios/predio1.jpg')"></div>
+            <div class="building-info-modal col-lg-6 align-self-center p-2 p-lg-0 d-flex flex-lg flex-column">
+              <div class="building-title-modal text-uppercase exoBoldItalic">
+                DOM Condomínio parque
+              </div>
+              <div class="building-description-modal exoItalic">
+                165.74 m<sup>2</sup> <br />3 Suítes <br />Noooooooooo
+              </div>
+              <div class="col-12 mb-3 pb-lg-5 position-sm-relative ">
+                  <div class="form-group">
+                    <label
+                      for="nome-input"
+                      class="text-uppercase input-label exo"
+                      >Nome:</label
+                    >
+                    <input type="email" class="form-control" id="nome-input" />
+                  </div>
+                  <div class="form-group">
+                    <label
+                      for="email-input"
+                      class="input-label text-uppercase exo"
+                    >Seu-email:</label
+                    >
+                    <input type="email" class="form-control" id="email-input" />
+                  </div>
+                  <div class="form-group">
+                      <label
+                        for="phone-input"
+                        class="text-uppercase input-label exo"
+                        >Telefone:</label
+                      >
+                      <input type="number" id="phone-input" class="form-control"/>
+                  </div>
+                  <button
+                    type="button"
+                    class="btn-accent-color w-sm-100 btn-modal text-white exoBoldItalic text-uppercase"
+                    id="cadastrar-button"
+                  >
+                    cadastrar
+                  </button>
+                </div>
+            </div>
+            
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
     <!-- Scroll top button -->
     <button onclick="topFunction()" id="toTop" title="Go to top"><i class="fas fa-arrow-up"></i></button> 
 
@@ -139,7 +199,7 @@
             <div class="hex pl-sm-5 position-relative" id="imoveis-prontos">
               <div class="hex-mid orange-hex">
                 <h2 class="text-white text-center mx-auto exoBoldItalic">
-                  IMÓVEIS PRONTOS OU EM CONSTRUÇÃO
+                  IMÓVEIS PRONTOS <br> OU EM CONSTRUÇÃO
                 </h2>
               </div>
               <div class="hex-small orange-hex-small"></div>
@@ -169,7 +229,7 @@
           <div
             class="col-md-9 h-lg-100 h-25 d-flex align-items-md-end align-items-center flex-row flex-lg-row justify-content-lg-around"
           >
-            <div class="hex pl-2 position-relative" id="condicoes-especiais">
+            <div class="hex position-relative" id="condicoes-especiais">
               <div class="hex-mid blue-hex">
                 <h2 class="text-white mx-auto exoBoldItalic">
                   CONDIÇÕES SUPER ESPECIAIS
@@ -233,7 +293,7 @@
                 165.74 m<sup>2</sup> <br />3 Suítes <br />Noooooooooo
               </div>
               <button
-                class="schedule-visit-btn btn-sm text-white exoBoldItalic text-uppercase"
+                class="schedule-visit-btn btn-sm text-white exoBoldItalic text-uppercase"  data-toggle="modal" data-target="#agendarVisitaModal"
               >
                 Agendar Visita
               </button>
@@ -255,7 +315,7 @@
                 165.74 m<sup>2</sup> <br />3 Suítes <br />Noooooooooo
               </div>
               <button
-                class="schedule-visit-btn btn-sm text-white exoBoldItalic text-uppercase"
+                class="schedule-visit-btn btn-sm text-white exoBoldItalic text-uppercase"  data-toggle="modal" data-target="#agendarVisitaModal"
               >
                 Agendar Visita
               </button>
@@ -277,7 +337,7 @@
                 165.74 m<sup>2</sup> <br />3 Suítes <br />Noooooooooo
               </div>
               <button
-                class="schedule-visit-btn btn-sm text-white exoBoldItalic text-uppercase"
+                class="schedule-visit-btn btn-sm text-white exoBoldItalic text-uppercase"  data-toggle="modal" data-target="#agendarVisitaModal"
               >
                 Agendar Visita
               </button>
@@ -833,7 +893,7 @@
       </div>
     </div>
 
-    <!-- Tela 10 -->
+    <!-- Tela 10 Hidden with js -->
     <div id="tela-10" class="container-fluid screen10-bg h-100 pb-5">
       <div class="row p-3 mb-5">
         <div class="col-12 d-flex flew-nowrap justify-content-center">
@@ -927,7 +987,7 @@
                 165.74 m<sup>2</sup> <br />3 Suítes <br />Noooooooooo
               </div>
               <button
-                class="schedule-visit-btn btn-sm text-white exoBoldItalic text-uppercase"
+                class="schedule-visit-btn btn-sm text-white exoBoldItalic text-uppercase"  data-toggle="modal" data-target="#agendarVisitaModal"
               >
                 Agendar Visita
               </button>
@@ -995,5 +1055,15 @@
       crossorigin="anonymous"
     ></script>
     <script src="js/main.js"></script>
+
+      <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-129266075-1"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'UA-129266075-1');
+    </script>
   </body>
 </html>
