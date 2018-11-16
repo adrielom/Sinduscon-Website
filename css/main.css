@@ -244,7 +244,15 @@ label {
   width: 40%;
 }
 
+.faded-bg {
+  background-color: rgba(0, 0, 0, 0.459);
+  position: absolute;
+  z-index: 5;
+}
+
 .timer-display {
+  margin: 0;
+  padding: 0 !important;
   font-size: 1.9rem;
 }
 
@@ -446,6 +454,12 @@ label {
   background-size: cover;
 }
 
+#title-banner1 {
+  width: 68%;
+  font-size: 3rem;
+  line-height: 3rem;
+}
+
 .building-img {
   height: 100%;
   width: 200px;
@@ -454,7 +468,7 @@ label {
 }
 
 .building-realstate-logo-container {
-  height: 45px;
+  height: 40px;
   width: 100%;
 }
 
@@ -487,7 +501,7 @@ label {
 }
 
 .building-description-modal {
-  line-height: 1rem;
+  line-height: 1.3rem;
   font-size: 1rem;
   margin-left: 3%;
   margin-bottom: 15px;
@@ -596,6 +610,7 @@ label {
 
 #days-missing p {
   font-size: 4rem;
+  margin-bottom: 0;
 }
 
 .btn-left {
@@ -678,18 +693,38 @@ label {
 @media screen and (max-width: 480px) {
   .timer-display {
     font-size: 1.3rem;
+    text-align: start;
+  }
+
+  .building-description {
+    margin-top: 0;
+  }
+
+  .schedule-visit-btn {
+    padding-top: 2%;
+    margin-top: 5%;
+    padding-bottom: 2% !important;
+    margin-bottom: 5% !important;
+    background-color: #736458;
+    border-radius: 0 !important;
+    font-size: 0.8rem !important;
+    height: 35px !important;
     text-align: center;
-    margin: 0;
-    right: 70%;
-    bottom: 25%;
-    width: 100%;
-    position: absolute;
+    vertical-align: middle;
+    border: none;
   }
 
   #map .embed-responsive {
     pointer-events: none;
     width: 100%;
     height: 350px !important;
+  }
+
+  .title-banner1 {
+    width: 95% !important;
+    margin-right: 95% !important;
+    font-size: 1.25rem !important;
+    line-height: 2rem;
   }
 
   .building-img-modal {
@@ -733,7 +768,7 @@ label {
   }
 
   .banner {
-    background-position: 28% 0;
+    background-position: 0 0;
   }
 
   .logo-banner {
@@ -741,9 +776,10 @@ label {
   }
 
   #title-banner1 {
-    font-size: 2.3rem !important;
-    line-height: 2.2rem !important;
+    font-size: 1.6rem !important;
+    line-height: 1.8rem !important;
     margin-top: 2% !important;
+    width: 76% !important;
     padding-top: 5%;
     margin-bottom: 10%;
   }
@@ -762,6 +798,7 @@ label {
 
   #days-missing {
     font-size: 1.4rem !important;
+    margin-bottom: 0;
   }
 
   #days-missing p {
@@ -781,14 +818,12 @@ label {
   }
 }
 
-#title-banner1 {
-  width: 72%;
-  font-size: 3rem;
-  line-height: 3rem;
-}
-
 #days-missing {
   font-size: 1.8rem;
+}
+
+#days-missing p {
+  margin-bottom: 0 !important;
 }
 
 .yellow-text {

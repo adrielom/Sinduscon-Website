@@ -5,6 +5,14 @@ $(document).ready(function() {
 
   $("#tela-10").hide();
 
+  $("#video").mouseover(function() {
+    $("#video-title").hide();
+  });
+
+  $("#video").mouseleave(function() {
+    $("#video-title").show();
+  });
+
   //buttons functionalities
   $("#left-arrow").click(() => {
     leftButton();
@@ -17,14 +25,6 @@ $(document).ready(function() {
   setInterval(function(e) {
     smallGallery(smallGalleryIndex);
   }, 3000);
-
-  $(".embed-responsive").mouseover(function() {
-    $("#video-title").hide();
-  });
-
-  $(".embed-responsive").mouseleave(function() {
-    $("#video-title").show();
-  });
 
   $("#map").mouseover(function() {
     $("#info-map").hide();
@@ -45,7 +45,7 @@ $(document).ready(function() {
       .text();
     let description = $(this)
       .siblings(".building-description")
-      .text();
+      .html();
     let image = $(this)
       .parent()
       .siblings(".building-img")
@@ -110,8 +110,6 @@ function populateListOfBuildings() {
   //selects building template
   let buildingTemplate = document.querySelector(".buildings-template");
 
-  console.log("buildingTemplate :", buildingTemplate);
-
   //loops for each element in list_of_buildings
   for (let index = 0; index < list_of_buildings.length; index++) {
     //clones template
@@ -132,20 +130,20 @@ let list_of_buildings = [
   new Building(
     "../img/predios/base.jpg",
     "Essenza Residenziale Cocó",
-    "•	125,29m² e 126,34m² <br>•	1 suíte (com closet ou closet e sacada ou closet casal)  <br>•	3 vagas de garagem  <br>•	Rua Batista de Oliveira, 1023 Cocó - Fortaleza/CE",
+    "• 125,29m² e 126,34m²	1 suíte (com closet ou closet e sacada ou closet casal)  <br>•	3 vagas de garagem  <br>•	Rua Batista de Oliveira, 1023 Cocó - Fortaleza/CE",
     "../img/logos/base_logo.png"
   ),
   new Building(
     "../img/predios/bspar.jpg",
     "Marzzano Premium Residence",
-    "•	88m², 100m² e 117m² <br>•	2 ou 3 suítes  <br>•	2 vagas de garagem  <br>•	Rua Francisca Almeida de Souza, 255 Dunas - Fortaleza/CE",
+    "• 88m², 100m² e 117m²	2 ou 3 suítes  <br>•	2 vagas de garagem  <br>•	Rua Francisca Almeida de Souza, 255 Dunas - Fortaleza/CE",
     "../img/logos/bspar_logo.png"
   ),
   new Building(
     "../img/predios/coringa.jpg",
     "Bosque das Flores",
     "•	141,83m² e 182,32m² <br>•	3 ou 4 suítes  (1 closet, com ou sem banheira)  <br>•	3 ou 4 vagas de garagem  <br>•	Rua José Alencar Ramos, 55 Guararapes - Fortaleza/CE",
-    "../img/logos/crolim_logo.jpg"
+    "../img/logos/crolim_logo.png"
   ),
   new Building(
     "../img/predios/canopus.jpg",
@@ -163,18 +161,18 @@ let list_of_buildings = [
     "../img/predios/coringa.jpg",
     "CASA NOVA EMPREENDIMENTO",
     "•	00, 00 m²  <br>•	0 quartos (sendo 0 suítes)  <br>•	0 vagas de garagem <br>•	Av. Nonono Nonono Nonono, 00 - Nononono",
-    "../img/logos/coringa-logo.png"
+    "../img/logos/casa-nova-logo.png"
   ),
   new Building(
     "../img/predios/columbia.jpg",
     "Edifício Cristal XII",
     "•	96,85m² <br>•	3 suítes  <br>•	2 vagas de garagem  <br>•	Rua Conselheiro Tristão, 1479 Bairro de Fátima - Fortaleza/CE",
-    "../img/logos/const-columbia-logo.gif"
+    "../img/logos/const-columbia-logo.png"
   ),
   new Building(
     "../img/predios/corinthus.jpg",
     "Edifício Fernando Rocha Residence",
-    "•	100,30m² <br>•	4 quartos (3 suítes, sendo 1 master e 1 reversível)  <br>•	2 ou 3 vagas de garagem  <br>•	Rua Ministro Abner Vasconcelos, 979, Sapiranga - Fortaleza/CE",
+    "• 100,30m²	4 quartos (3 suítes, sendo 1 master e 1 reversível)  <br>•	2 ou 3 vagas de garagem  <br>•	Rua Ministro Abner Vasconcelos, 979, Sapiranga",
     "../img/logos/marca-corintus-logo.png"
   ),
   new Building(
@@ -186,7 +184,7 @@ let list_of_buildings = [
   new Building(
     "../img/predios/dube.jpg",
     "Jardins de Murano",
-    "•	195m² (100% Personalizado) <br>•	4 suítes (1 Suíte master com amplo closet e banheira de hidromassagem e 1 no térreo)  <br>•	3 ou 4 vagas de garagem  <br>•	Av. Eusébio de Queiroz, 5684 Centro - Eusébio/CE",
+    "• 195m² (100% Personalizado)	4 suítes (1 Suíte master com amplo closet e banheira de hidromassagem e 1 no térreo)  <br>•	3 ou 4 vagas de garagem  <br>•	Av. Eusébio de Queiroz, 5684 Centro - Eusébio/CE",
     "../img/logos/dube_logo.png"
   ),
   new Building(
@@ -198,14 +196,14 @@ let list_of_buildings = [
   new Building(
     "../img/predios/habitus.jpg",
     "Condomínio Jacarandá",
-    "•	73,5m² e 108m²  <br>•	3 quartos, 2 suítes (sendo 1 reversível) <br>•	2 vagas de garagem  <br>•	Rua Bahia, 26 Parque Havaí - Eusébio/CE",
-    "../img/logos/enxegata_logo.png"
+    "• 73,5m² e 108m²	3 quartos, 2 suítes (sendo 1 reversível) <br>•	2 vagas de garagem  <br>•	Rua Bahia, 26 Parque Havaí - Eusébio/CE",
+    "../img/logos/habitus-logo.png"
   ),
   new Building(
     "../img/predios/inova.jpg",
     "Sonata Residence",
     "•	62,38m² e 72,09m²  <br>•	2 e 3 quartos (1 suíte) <br>•	1 ou 2 vagas  <br>•	Rua Guaramirim, 805 Lagoinha - Eusébio/CE.",
-    "../img/logos/inova_logo.jpeg"
+    "../img/logos/inova-logo.png"
   ),
   new Building(
     "../img/predios/jsimoes.jpg",
@@ -229,7 +227,7 @@ let list_of_buildings = [
     "../img/predios/coringa.jpg",
     "Marbella Home Club",
     "•	110,03m²  <br>•	3 suítes <br>•	2 vaga de garagem  <br>•	Rua Antônio Augusto, 1700 Aldeota - Fortaleza/CE",
-    "../img/logos/coringa-logo.png"
+    "../img/logos/mendonca-logo.png"
   ),
   new Building(
     "../img/predios/monteplan.jpg",
@@ -240,13 +238,13 @@ let list_of_buildings = [
   new Building(
     "../img/predios/mota-machado.jpg",
     "Reservatto Condomínio Parque",
-    "•	74,05m²  <br>•	2 ou 3 quartos (2 suítes) <br>•	2 vagas de garagem  <br>•	Rua Luíza Miranda Coelho, 1130 Guararapes - Fortaleza/CE",
+    "• 74,05m²	2 ou 3 quartos (2 suítes) <br>•	2 vagas de garagem  <br>•	Rua Luíza Miranda Coelho, 1130 Guararapes - Fortaleza/CE",
     "../img/logos/mota-machado-logo.png"
   ),
   new Building(
     "../img/predios/moura-dubeaux.jpg",
     "Metropolitan Central Park",
-    "•	94m², 109m² e 130m²  <br>•	2 ou 3 suítes <br>•	2 vagas de garagem  <br>•	Rua Artista Plástico Joaquim de Souza, 101 Papicu - Fortaleza/CE",
+    "• 94m², 109m² e 130m²	2 ou 3 suítes <br>•	2 vagas de garagem  <br>•	Rua Artista Plástico Joaquim de Souza, 101 Papicu - Fortaleza/CE",
     "../img/logos/moura-dubeux-engenharia-original_logo.png"
   ),
   new Building(
@@ -338,9 +336,6 @@ function settingBigBuildings(b, obj) {
 
 //goes up the list - resets after reachign the edge
 function rightButton() {
-  console.log("bigImageIndex :", bigImageIndex);
-  console.log("list_of_buildings.length :", list_of_buildings.length);
-
   if (bigImageIndex == list_of_buildings.length) {
     bigImageIndex = 0;
   } else {

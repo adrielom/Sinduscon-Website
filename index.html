@@ -10,6 +10,7 @@
     />
     <link rel="stylesheet" href="css/main.css" />
 
+    <link rel="shortcut icon" type="image/png" href="img/sinduscon-logo.png"/>
     <!-- Bootstrap CSS -->
     <link
       rel="stylesheet"
@@ -24,7 +25,25 @@
       crossorigin="anonymous"
     />
   </head>
-
+    <!-- Facebook Pixel Code -->
+    <script>
+      !function(f,b,e,v,n,t,s)
+      {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+      n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+      if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+      n.queue=[];t=b.createElement(e);t.async=!0;
+      t.src=v;s=b.getElementsByTagName(e)[0];
+      s.parentNode.insertBefore(t,s)}(window,document,'script',
+      'https://connect.facebook.net/en_US/fbevents.js');
+      fbq('init', '2216045385275146'); 
+      fbq('track', 'PageView');
+      </script>
+      <noscript>
+      <img height="1" width="1" 
+      src="https://www.facebook.com/tr?id=2216045385275146&ev=PageView
+      &noscript=1"/>
+      </noscript>
+      <!-- End Facebook Pixel Code -->
   <body>
     
     <!-- Modal PopUp -->
@@ -128,12 +147,12 @@
             >
               o maior feirão de casas, lotes e apartamentos que você já viu.
             </h2>
-            <div class="row d-flex-sm flex-sm-row flex-nowrap mx-auto mx-sm-0">
+            <div class="row d-flex flex-column flex-nowrap mx-auto px-sm-0 mx-sm-0">
               <div class="col-lg-2 p-0"></div>
-              <div class="col-12 col-sm-2 text-lg-start mx-lg-auto col-lg-4 p-lg-0 mr-2">
+              <div class="col-lg-9 pl-lg-2 col-sm-6 text-lg-start px-0 mx-lg-auto col-lg-4 p-lg-0">
                   <h2 class="text-uppercase exoBoldItalic  yellow-text" id="days-missing">faltam <p class=" yellow-text">12 dias</p></h2>
               </div>
-              <div class="col-12 col-sm-6 w-100 position-relative text-lg-start mx-lg-auto col-lg-4 p-lg-0 d-flex align-items-end pb-lg-4">
+              <div class="col-lg-9 pl-lg-2 col-sm-6 w-100 px-0 text-start mx-lg-auto col-lg-4 p-lg-0 d-flex align-items-end pb-lg-4">
                   <h2 id="hours-missing" class="timer-display yellow-text exoBoldItalic">120:32:15h</h2>
               </div>
               <div class="col-lg-2"></div>
@@ -282,7 +301,7 @@
             class="building-block-display d-flex flex-row shadow mb-4 mb-lg-0"
           >
             <div class="building-img "></div>
-            <div class="building-info p-2 d-flex flex-column">
+            <div class="building-info p-2 pb-sm-0 d-flex flex-column">
               <div class="building-realstate-logo-container">
                 <div class="building-realstate-img"></div>
               </div>
@@ -430,14 +449,16 @@
     </div>
 
     <!-- Tela 5 -->
-    <div id="video" class="embed-responsive position-relative embed-responsive-16by9">
+    <div id="video" class="faded-bg embed-responsive position-relative embed-responsive-16by9">
+      <!-- 
       <div id="video-title"
         class="layer-video d-none d-lg-block text-center text-white exoBoldItalic"
       >
         ASSISTA O COMERCIAL E ENTRE NO CLIMA DO MAIOR FEIRÃO DE IMÓVEIS QUE VOCÊ
         JÁ VIU.
       </div>
-      <iframe width="1349" height="524" src="https://www.youtube.com/embed/2ypzomq0Khg" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+       -->
+      <iframe width="1349" height="524" src="https://www.youtube.com/embed/a8ZxZt0lj3M" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
     </div>
 
     <!-- Tela 6 -->
@@ -483,13 +504,13 @@
           <div class="marca-container">
             <div
               class="marca-img"
-              style="background-image: url('/img/logos/crolim_logo.jpg')"
+              style="background-image: url('/img/logos/crolim_logo.png')"
             ></div>
           </div>
           <div class="marca-container">
             <div
               class="marca-img"
-              style="background-image: url('/img/logos/const-columbia-logo.gif')"
+              style="background-image: url('/img/logos/const-columbia-logo.png')"
             ></div>
           </div>
           <div class="marca-container">
@@ -540,7 +561,7 @@
           <div class="marca-container">
             <div
               class="marca-img"
-              style="background-image: url('/img/logos/Inova_logo.jpeg')"
+              style="background-image: url('/img/logos/inova-logo.png')"
             ></div>
           </div>
           <div class="marca-container">
@@ -579,7 +600,7 @@
           <div class="marca-container">
             <div
               class="marca-img"
-              style="background-image: url('/img/logos/mrv_logo.jpg')"
+              style="background-image: url('/img/logos/mrv_logo.png')"
             ></div>
           </div>
           <div class="marca-container">
@@ -908,7 +929,7 @@
         <div class="col-12 justify-content-center d-flex">
           <div
             id="big-building"
-            class="building-block-big blue-border d-flex flex-row shadow mb-4 mb-lg-0"
+            class="building-block-big blue-border d-flex flex-row shadow pb-5 mb-5 mb-lg-0"
           >
             <div class="building-img-big "></div>
             <div class="building-info-big p-2 d-flex flex-column">
@@ -973,7 +994,7 @@
           <!-- Copy 30 of these with js -->
           <div
             id="buildings-template"
-            class="d-none buildings-template building-block-display d-flex mt-5 flex-row shadow mb-4 mb-lg-0"
+            class="d-none buildings-template building-block-display d-flex mt-5 flex-row shadow mb-lg-0"
           >
             <div class="building-img "></div>
             <div class="building-info p-2 d-flex flex-column">
