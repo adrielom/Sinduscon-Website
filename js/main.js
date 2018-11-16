@@ -2,6 +2,7 @@ $(document).ready(function() {
   //starting Stuff
   populateListOfBuildings();
   countDown();
+  console.log(list_of_buildings.length);
 
   $("#tela-10").hide();
 
@@ -221,7 +222,7 @@ let list_of_buildings = [
     "../img/predios/coringa.jpg",
     "JVS EMPREENDIMENTO",
     "•	00, 00 m²  <br>•	0 quartos (sendo 0 suítes)  <br>•	0 vagas de garagem <br>•	Av. Nonono Nonono Nonono, 00 - Nononono",
-    "../img/logos/coringa-logo.png"
+    "../img/logos/jvs_logo.png"
   ),
   new Building(
     "../img/predios/coringa.jpg",
@@ -251,7 +252,7 @@ let list_of_buildings = [
     "../img/predios/coringa.jpg",
     "MRV EMPREENDIMENTO",
     "•	00, 00 m²  <br>•	0 quartos (sendo 0 suítes)  <br>•	0 vagas de garagem <br>•	Av. Nonono Nonono Nonono, 00 - Nononono",
-    "../img/logos/coringa-logo.png"
+    "../img/logos/mrv_logo.png"
   ),
   new Building(
     "../img/predios/muza.jpg",
@@ -323,6 +324,21 @@ function settingBuildings(b, index) {
   b.children[1].children[2].innerHTML = list_of_buildings[index].description;
 }
 
+function settingBuildingsGallery(b, index) {
+  //sets the image of a specific object
+  b.children[0].style.backgroundImage = "url(" + index.image + ")";
+
+  b.children[1].children[0].children[0].style.backgroundImage =
+    "url(" + index.logoImg;
+  +")";
+
+  //sets the title of a specific object
+  b.children[1].children[1].innerHTML = index.title;
+
+  //sets the description of a specific object
+  b.children[1].children[2].innerHTML = index.description;
+}
+
 function settingBigBuildings(b, obj) {
   //sets the image of a specific object
   b.children[0].style.backgroundImage = "url(" + obj.image + ")";
@@ -354,12 +370,18 @@ function leftButton() {
   settingBigImage();
 }
 
+let auxList = list_of_buildings.map(x => x);
 let randomNumbs = [];
-for (let index = 0; index < 9; index++) {
-  randomNumbs[index] = Math.floor(Math.random() * list_of_buildings.length);
-}
 
 let smallGalleryIndex = 0;
+
+for (let index = 0; index < 9; index++) {
+  let ran = Math.floor(Math.random() * auxList.length);
+  randomNumbs[index] = auxList[ran];
+  auxList.splice(ran, 1);
+
+  console.log("randomNumbs[index] :", auxList.length);
+}
 
 function smallGallery(e) {
   let sg1 = document.querySelector("#small-gallery-el1");
@@ -367,31 +389,33 @@ function smallGallery(e) {
   let sg3 = document.querySelector("#small-gallery-el3");
 
   let cirInd = document.querySelector("#circles-indicators");
+
   for (let o = 0; o < cirInd.children.length; o++) {
     cirInd.children[o].classList.remove("active-circle");
     cirInd.children[o].classList.remove("inactive-circle");
   }
+
   switch (e) {
     case 0:
-      settingBuildings(sg1, randomNumbs[0]);
-      settingBuildings(sg2, randomNumbs[1]);
-      settingBuildings(sg3, randomNumbs[2]);
+      settingBuildingsGallery(sg1, randomNumbs[0]);
+      settingBuildingsGallery(sg2, randomNumbs[1]);
+      settingBuildingsGallery(sg3, randomNumbs[2]);
       cirInd.children[0].classList.add("active-circle");
       cirInd.children[1].classList.add("inactive-circle");
       cirInd.children[2].classList.add("inactive-circle");
       break;
     case 1:
-      settingBuildings(sg1, randomNumbs[3]);
-      settingBuildings(sg2, randomNumbs[4]);
-      settingBuildings(sg3, randomNumbs[5]);
+      settingBuildingsGallery(sg1, randomNumbs[3]);
+      settingBuildingsGallery(sg2, randomNumbs[4]);
+      settingBuildingsGallery(sg3, randomNumbs[5]);
       cirInd.children[0].classList.add("inactive-circle");
       cirInd.children[1].classList.add("active-circle");
       cirInd.children[2].classList.add("inactive-circle");
       break;
     case 2:
-      settingBuildings(sg1, randomNumbs[6]);
-      settingBuildings(sg2, randomNumbs[7]);
-      settingBuildings(sg3, randomNumbs[8]);
+      settingBuildingsGallery(sg1, randomNumbs[6]);
+      settingBuildingsGallery(sg2, randomNumbs[7]);
+      settingBuildingsGallery(sg3, randomNumbs[8]);
       cirInd.children[0].classList.add("inactive-circle");
       cirInd.children[1].classList.add("inactive-circle");
       cirInd.children[2].classList.add("active-circle");
