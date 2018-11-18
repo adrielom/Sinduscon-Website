@@ -768,7 +768,7 @@ label {
 
   .form-div-big .mc-field-group,
   .form-div-big .button {
-    width: 95% !important;
+    width: 100% !important;
   }
 
   .mc-field-group {
@@ -980,6 +980,11 @@ label {
   #days-missing p {
     font-size: 3rem !important;
   }
+}
+
+.mc-field-group,
+.subscribe-visit-btn {
+  width: 100% !important;
 }
 
 @media (min-width: 1366px) and (max-width: 4200px) {

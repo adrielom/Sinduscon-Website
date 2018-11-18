@@ -2,7 +2,6 @@ $(document).ready(function() {
   //starting Stuff
   populateListOfBuildings();
   countDown();
-  console.log(list_of_buildings.length);
 
   $("#tela-10").hide();
 
@@ -60,8 +59,9 @@ $(document).ready(function() {
 
 function countDown() {
   // Set the date we're counting down to
-  var countDownDate = new Date("Nov 22, 2018 17:00:00").getTime();
+  var countDownDate = new Date("Nov 22, 2018 24:00:00").getTime();
   var finishDate = new Date("Nov 26, 2018 10:00:00").getTime();
+  let otherDate = new Date("Nov 22, 2018 17:00:00").getTime();
 
   // Update the count down every 1 second
   var x = setInterval(function() {
@@ -70,7 +70,7 @@ function countDown() {
 
     // Find the distance between now and the count down date
     var distance = countDownDate - now;
-
+    var distance2 = otherDate - now;
     // Time calculations for days, hours, minutes and seconds
     var days = Math.floor(distance / (1000 * 60 * 60 * 24));
     var hours = Math.floor(
@@ -79,13 +79,12 @@ function countDown() {
     var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
     var seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
-    console.log("object :", hours);
     // Display the result in the element with id="days-missing span"
     let dm = document.querySelector("#days-missing span");
     dm.textContent = days;
 
     // If the count down is finished, write some text
-    if (distance < 0) {
+    if (distance < 0 || distance2 < 0) {
       clearInterval(x);
       dm.textContent = "";
       $(".counter-bg").hide();
@@ -375,8 +374,6 @@ for (let index = 0; index < 9; index++) {
   let ran = Math.floor(Math.random() * auxList.length);
   randomNumbs[index] = auxList[ran];
   auxList.splice(ran, 1);
-
-  console.log("randomNumbs[index] :", auxList.length);
 }
 
 function smallGallery(e) {
