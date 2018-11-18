@@ -60,7 +60,7 @@ $(document).ready(function() {
 
 function countDown() {
   // Set the date we're counting down to
-  var countDownDate = new Date("Nov 22, 2018 10:00:00").getTime();
+  var countDownDate = new Date("Nov 22, 2018 17:00:00").getTime();
   var finishDate = new Date("Nov 26, 2018 10:00:00").getTime();
 
   // Update the count down every 1 second
@@ -79,28 +79,18 @@ function countDown() {
     var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
     var seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
+    console.log("object :", hours);
     // Display the result in the element with id="days-missing span"
-    let dm = document.querySelector("#days-missing p");
-    dm.textContent = days + " dias";
-    let hm = document.querySelector("#hours-missing");
-    if (days < 10) {
-      hm.style.paddingLeft = "15px";
-      hm.textContent = hours + "h " + minutes + "m " + seconds + "s ";
-    } else {
-      hm.textContent = hours + "h " + minutes + "m " + seconds + "s ";
-    }
-    let falta = document.querySelector("#days-missing");
+    let dm = document.querySelector("#days-missing span");
+    dm.textContent = days;
 
     // If the count down is finished, write some text
     if (distance < 0) {
       clearInterval(x);
       dm.textContent = "";
-      hm.textContent = "";
-      if (finishDate - now < 0) {
-        falta.textContent = "O feirão acabou.";
-      } else {
-        falta.textContent = "Já começou! Venha para o feirão!";
-      }
+      $(".counter-bg").hide();
+    } else {
+      $("#feirao-comecou").hide();
     }
   }, 1000);
 }
@@ -129,45 +119,45 @@ function populateListOfBuildings() {
 //lists of all buildings objects
 let list_of_buildings = [
   new Building(
-    "../img/predios/base.jpg",
+    "../img/predios/base.png",
     "Essenza Residenziale Cocó",
-    "• 125,29m² e 126,34m²	1 suíte (com closet ou closet e sacada ou closet casal)  <br>•	3 vagas de garagem  <br>•	Rua Batista de Oliveira, 1023 Cocó - Fortaleza/CE",
+    "• 125,29m² e 126,34m²	1 suíte (com closet ou closet e sacada ou closet casal)  <br>•	3 vagas de garagem  <br>•	Rua Dr. Batista de Oliveira, 1023 - Cocó",
     "../img/logos/base_logo.png"
   ),
   new Building(
     "../img/predios/bspar.jpg",
     "Marzzano Premium Residence",
-    "• 88m², 100m² e 117m²	2 ou 3 suítes  <br>•	2 vagas de garagem  <br>•	Rua Francisca Almeida de Souza, 255 Dunas - Fortaleza/CE",
+    "• 88m², 100m² e 117m²	2 ou 3 suítes  <br>•	2 vagas de garagem  <br>•	Rua Francisca Almeida de Souza, 255 Dunas",
     "../img/logos/bspar_logo.png"
   ),
   new Building(
-    "../img/predios/coringa.jpg",
+    "../img/predios/crolim.png",
     "Bosque das Flores",
-    "•	141,83m² e 182,32m² <br>•	3 ou 4 suítes  (1 closet, com ou sem banheira)  <br>•	3 ou 4 vagas de garagem  <br>•	Rua José Alencar Ramos, 55 Guararapes - Fortaleza/CE",
+    "•	141,83m² e 182,32m² <br>•	3 ou 4 suítes  (1 closet, com ou sem banheira)  <br>•	3 ou 4 vagas de garagem  <br>•	Rua José Alencar Ramos, 55 Guararapes",
     "../img/logos/crolim_logo.png"
   ),
   new Building(
     "../img/predios/canopus.jpg",
     "Gran Village Messejana",
-    "•	48,04m² <br>•	2 quartos (1 suíte)  <br>•	1 vaga de garagem  <br>•	Rua Luiz Francisco Xavier, s/n Messejana - Fortaleza/CE",
+    "•	48,04m² <br>•	2 quartos (1 suíte)  <br>•	1 vaga de garagem  <br>•	Rua Luiz Francisco Xavier, s/n Messejana",
     "../img/logos/canopus_logo.png"
   ),
   new Building(
-    "../img/predios/coringa.jpg",
-    "CARNEIRO MELO EMPREENDIMENTO",
-    "•	48,04m² <br>•	2 quartos (1 suíte)  <br>•	1 vaga de garagem  <br>•	Rua Luiz Francisco Xavier, s/n Messejana - Fortaleza/CE",
-    "../img/logos/coringa-logo.png"
+    "../img/predios/carneiro.png",
+    "Carmel Bosque Duo",
+    "•	229m² e 300m² <br>•	3 ou 4 suítes  <br>•	3 a 5 vagas de garagem  <br>•	Rua Francisco Matias, 267 - Sabiaguaba",
+    "../img/logos/carneiro-logo.png"
   ),
   new Building(
-    "../img/predios/coringa.jpg",
-    "CASA NOVA EMPREENDIMENTO",
-    "•	00, 00 m²  <br>•	0 quartos (sendo 0 suítes)  <br>•	0 vagas de garagem <br>•	Av. Nonono Nonono Nonono, 00 - Nononono",
+    "../img/predios/casa-nova.jpg",
+    "Condomínio CN Eusébio Boulevard I",
+    "•	64,09m²  <br>•	2 quartos (1 suíte)  <br>•	1 vagas de garagem <br>•	Rua Vereda Tropical, s/n - Eusébio/CE",
     "../img/logos/casa-nova-logo.png"
   ),
   new Building(
     "../img/predios/columbia.jpg",
     "Edifício Cristal XII",
-    "•	96,85m² <br>•	3 suítes  <br>•	2 vagas de garagem  <br>•	Rua Conselheiro Tristão, 1479 Bairro de Fátima - Fortaleza/CE",
+    "•	96,85m² <br>•	3 suítes  <br>•	2 vagas de garagem  <br>•	Rua Conselheiro Tristão, 1479 Bairro de Fátima",
     "../img/logos/const-columbia-logo.png"
   ),
   new Building(
@@ -179,115 +169,121 @@ let list_of_buildings = [
   new Building(
     "../img/predios/dias-de-sousa.jpg",
     "Parc Victoria",
-    "•	76,50m² <br>•	3 quartos (2 suítes)  <br>•	2 vagas de garagem  <br>•	Av. Comodoro Estácio Brígido, 1999 - Guararapes Fortaleza/CE",
+    "•	76,50m² <br>•	3 quartos (2 suítes)  <br>•	2 vagas de garagem  <br>•	Av. Comodoro Estácio Brígido, 1999 - Guararapes",
     "../img/logos/diasdesousa_logo.png"
   ),
   new Building(
-    "../img/predios/dube.jpg",
+    "../img/predios/dube.png",
     "Jardins de Murano",
-    "• 195m² (100% Personalizado)	4 suítes (1 Suíte master com amplo closet e banheira de hidromassagem e 1 no térreo)  <br>•	3 ou 4 vagas de garagem  <br>•	Av. Eusébio de Queiroz, 5684 Centro - Eusébio/CE",
+    "• Áreas de 150m² a 240m² <br>• 10 opções de plantas <br>• 100% personalizável <br>•	3 ou 4 quartos  <br>•	3 ou 4 vagas <br>•	Av. Eusébio de Queiroz, 5684 Centro - Eusébio/CE",
     "../img/logos/dube_logo.png"
   ),
   new Building(
     "../img/predios/enxegata.jpg",
     "Residencial Guararapes",
-    "•	71,67m², 77,78m² e 78,48m² <br>•	2 suítes  <br>•	2 vagas  <br>•	Rua Jaime Pinheiro, 130, Guararapes - Fortaleza/CE",
+    "•	71,67m², 77,78m² e 78,48m² <br>•	3 quartos (2 suítes, sendo 1 reversível) <br>•	2 vagas  <br>•	Rua Jaime Pinheiro, 130, Guararapes",
     "../img/logos/engexata_logo.png"
   ),
   new Building(
     "../img/predios/habitus.jpg",
     "Condomínio Jacarandá",
-    "• 73,5m² e 108m²	3 quartos, 2 suítes (sendo 1 reversível) <br>•	2 vagas de garagem  <br>•	Rua Bahia, 26 Parque Havaí - Eusébio/CE",
+    "• 73,5m² e 108m²	<br>• 3 quartos (2 suítes e 1 quarto gabinete) <br>•	2 vagas de garagem  <br>•	Rua Bahia, 26 Parque Havaí - Eusébio/CE",
     "../img/logos/habitus-logo.png"
   ),
   new Building(
     "../img/predios/inova.jpg",
     "Sonata Residence",
-    "•	62,38m² e 72,09m²  <br>•	2 e 3 quartos (1 suíte) <br>•	1 ou 2 vagas  <br>•	Rua Guaramirim, 805 Lagoinha - Eusébio/CE.",
+    "•	62,38m² e 72,09m²  <br>•	2 e 3 quartos (1 suíte) <br>•	1 ou 2 vagas de garagem <br>•	Rua Guaramirim, 805 Lagoinha - Eusébio/CE.",
     "../img/logos/inova-logo.png"
   ),
   new Building(
     "../img/predios/jsimoes.jpg",
     "Absoluto Parque do Cocó",
-    "•	154,53m² e 158,52m²  <br>•	3 suítes <br>•	3 vagas de garagem  <br>•	Rua Israel Bezerra, 1090 Cocó - Fortaleza/CE",
+    "•	154,53m² e 158,52m²  <br>•	3 suítes <br>•	3 vagas de garagem  <br>•	Rua Israel Bezerra, 1090 Cocó",
     "../img/logos/jsimoes_logo.png"
   ),
   new Building(
     "../img/predios/jatahy.jpg",
-    "Condomínio CN Eusébio Boulevard I",
-    "•	64,09m²  <br>•	2 quartos (1 suíte) <br>•	1 vaga de garagem  <br>•	Rua Vereda Tropical, s/n Eusébio/CE",
-    "../img/logos/jatahy_logo.png"
+    "Edifício Cidade",
+    "•	53, 44m² e 64,72m² <br>• 2 ou 3 quartos (1 suíte) <br>• 1 ou 2 vagas de garagem <br>• Rua Guilherme Rocha, 1299 Centro ",
+    "../img/logos/jatahy-logo.png"
   ),
   new Building(
-    "../img/predios/coringa.jpg",
-    "JVS EMPREENDIMENTO",
-    "•	00, 00 m²  <br>•	0 quartos (sendo 0 suítes)  <br>•	0 vagas de garagem <br>•	Av. Nonono Nonono Nonono, 00 - Nononono",
+    "../img/predios/jvs.png",
+    "Monte Olimpo 2",
+    "•	De 145,28m² até 210,61m²  <br>•	3 ou 4 quartos (3 ou 4 suítes)  <br>•	2 a 4 vagas de garagem<br>•	Rua Melo César, 801 Cidade dos Funcionários",
     "../img/logos/jvs_logo.png"
   ),
   new Building(
-    "../img/predios/coringa.jpg",
+    "../img/predios/mendoca-marbella.png",
     "Marbella Home Club",
-    "•	110,03m²  <br>•	3 suítes <br>•	2 vaga de garagem  <br>•	Rua Antônio Augusto, 1700 Aldeota - Fortaleza/CE",
+    "•	110,03m²  <br>•	3 suítes(varanda gourmet) <br>•	2 vaga de garagem  <br>•	Rua Antônio Augusto, 1700 Aldeota",
     "../img/logos/mendonca-logo.png"
   ),
   new Building(
     "../img/predios/monteplan.jpg",
     "Condomínio Belas Artes",
-    "•	75m² e 95m²  <br>•	3 quartos (1 suíte) <br>•	2 vagas de garagem  <br>•	Rua Padre Valdevino, 714 Aldeota - Fortaleza/CE",
+    "•	75m² e 95m²  <br>•	3 quartos (1 suíte) <br>•	2 vagas de garagem  <br>•	Rua Padre Valdevino, 714 Aldeota",
     "../img/logos/monteplan-logo.png"
   ),
   new Building(
     "../img/predios/mota-machado.jpg",
     "Reservatto Condomínio Parque",
-    "• 74,05m²	2 ou 3 quartos (2 suítes) <br>•	2 vagas de garagem  <br>•	Rua Luíza Miranda Coelho, 1130 Guararapes - Fortaleza/CE",
+    "• 74,05m²	2 ou 3 quartos (2 suítes) <br>•	2 vagas de garagem  <br>•	Rua Luíza Miranda Coelho, 1130 Guararapes",
     "../img/logos/mota-machado-logo.png"
   ),
   new Building(
     "../img/predios/moura-dubeaux.jpg",
     "Metropolitan Central Park",
-    "• 94m², 109m² e 130m²	2 ou 3 suítes <br>•	2 vagas de garagem  <br>•	Rua Artista Plástico Joaquim de Souza, 101 Papicu - Fortaleza/CE",
+    "• 94m², 109m² e 130m² <br>•	2 ou 3 suítes <br>•	2 vagas de garagem  <br>•	Rua Artista Plástico Joaquim de Souza, 101 Papicu",
     "../img/logos/moura-dubeux-engenharia-original_logo.png"
   ),
   new Building(
-    "../img/predios/coringa.jpg",
-    "MRV EMPREENDIMENTO",
-    "•	00, 00 m²  <br>•	0 quartos (sendo 0 suítes)  <br>•	0 vagas de garagem <br>•	Av. Nonono Nonono Nonono, 00 - Nononono",
+    "../img/predios/mhr.png",
+    "Fonte das Artes Parque Michelangelo",
+    "•	41,85m², 44,12m² e 47,69m²   <br>•	2 quartos  <br>•	1 vaga de garagem <br>•	Rua A - Messejana",
     "../img/logos/mrv_logo.png"
   ),
   new Building(
     "../img/predios/muza.jpg",
     "Residencial Villa Firenze",
-    "•	59,71 m² e 65,75 m²  <br>•	2 e 3 quartos <br>•	1 vaga de garagem  <br>•	Rua Cel. João de Oliveira, 555, Cambeba - Fortaleza/CE",
+    "•	59,71 m² e 65,75 m²  <br>•	2 e 3 quartos <br>•	1 vaga de garagem  <br>•	Rua Cel. João de Oliveira, 555, Cambeba",
     "../img/logos/muz_logo.png"
+  ),
+  new Building(
+    "../img/predios/novaes.jpg",
+    "Viva La Vida Park Residence",
+    "•	95m², 116m² e 126m²  <br>•	3 suítes <br>•	2 vagas de garagem  <br>•	Rua Evaristo da Veiga 140 Parque Del Sol Cidade dos Funcionários",
+    "../img/logos/novaes-logo.png"
   ),
   new Building(
     "../img/predios/placic.jpg",
     "Promenade Aldeota",
-    "•	158,26m²  <br>•	3 suítes + 1 gabinete com WC reversível <br>•	3 vagas de garagem  <br>•	Rua Carolina Sucupira, 400 - Aldeota Fortaleza/CE",
+    "•	158,26m²  <br>•	3 suítes + 1 gabinete com WC reversível <br>•	3 vagas de garagem  <br>•	Rua Carolina Sucupira, 400 - Aldeota",
     "../img/logos/placic_logo.png"
   ),
   new Building(
     "../img/predios/porto-freire.jpg",
     "Villa Gaudí",
-    "•	60m² e 86m²  <br>•	2 ou 3 quartos (1 ou 2 suítes) e 1 WC Social  <br>•	1 ou 2 vagas de garagem  <br>• Rua Alódia, 203 Cidade dos Funcionários Fortaleza/CE",
+    "•	60m² e 86m²  <br>•	2 ou 3 quartos (1 ou 2 suítes) e 1 WC Social  <br>•	1 ou 2 vagas de garagem  <br>• Rua Alódia, 203 Cidade dos Funcionários",
     "../img/logos/porto-freire-logo.png"
   ),
   new Building(
     "../img/predios/rci.jpg",
     "Reserva Castelão",
-    "•	54,07m² e 60,56m²  <br>•	3 quartos (2 suítes, sendo 1 reversível)  <br>•	1 ou 2 vagas de garagem  <br>• Rua Adélia Feijó, 755 Castelão - Fortaleza/CE",
+    "•	54,07m² e 60,56m²  <br>•	3 quartos (2 suítes, sendo 1 reversível)  <br>•	1 ou 2 vagas de garagem  <br>• Rua Adélia Feijó, 755 Castelão",
     "../img/logos/rci_logo.png"
   ),
   new Building(
     "../img/predios/riomar.jpg",
-    "RIOMAR TRADE",
-    "•	00, 00 m²  <br>•	0 quartos (sendo 0 suítes)  <br>•	0 vagas de garagem <br>•	Av. Nonono Nonono Nonono, 00 - Nononono",
+    "Empresarial RioMar Trade Center ",
+    "•	Empreendimento pronto  <br>• Integrado do Shopping  <br>•	302 unidades <br>•	Salas a partir de 33m²<br>•	Rua Desembargador Lauro Nogueira, 1500 Papicu",
     "../img/logos/riomar-logo.png"
   ),
   new Building(
     "../img/predios/terra-brasilis.jpg",
     "Reserva Terra Brasilis",
-    "•	RODOVIA CE-040,	KM 12 (Próximo ao Circo Tupiniquim)",
+    "•	Lotes a partir de 300m²<br>•	Loteamento fechado de alto padrão <br>•	Rodovia CE-040,	Km 12 (Próximo ao Circo Tupiniquim)",
     "../img/logos/terra-brasilis-logo.png"
   )
 ];

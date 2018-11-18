@@ -19,7 +19,7 @@ html {
 }
 
 .btn-accent-color {
-  background-color: #02a5e0;
+  background-color: #02a5e0 !important;
 }
 
 #map iframe {
@@ -38,7 +38,7 @@ input[type="number"] {
   -moz-appearance: textfield !important;
 }
 
-#cadastrar-button {
+#mc-embedded-subscribe {
   height: 3.3rem;
   width: 395px;
   text-align: center;
@@ -64,8 +64,8 @@ input[type="number"] {
   overflow: hidden;
 }
 
-.form-group {
-  margin-bottom: 20px !important;
+.mc-field-group {
+  width: 350px !important;
 }
 
 label {
@@ -179,6 +179,10 @@ label {
 
 .orange-bg {
   background-color: #f15a29;
+}
+
+.bright-orange-bg {
+  background-image: linear-gradient(to bottom right, #ff7900, #ff7800);
 }
 
 .border-img {
@@ -475,14 +479,36 @@ label {
 .building-info {
   width: 150px;
 }
+
+.counter-bg {
+  background-image: url("../img/counter-bg.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  height: 200px;
+}
+
+.pipe {
+  background-image: url("../img/cano-contador.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 45%;
+  top: 45%;
+  height: 100%;
+  position: absolute;
+  z-index: 2;
+}
+
+#mc_embed_signup .button {
+  height: 40px !important;
+}
+
 .schedule-visit-btn {
   padding-top: 2%;
-  margin-top: 5%;
+  margin-top: 3px !important;
   background-color: #736458;
-  border-radius: 0 !important;
   font-size: 0.8rem !important;
-  height: 15%;
   border: none;
+  width: 100% !important;
 }
 
 .building-realstate-img {
@@ -609,7 +635,7 @@ label {
 }
 
 #days-missing p {
-  font-size: 4rem;
+  font-size: 1rem;
   margin-bottom: 0;
 }
 
@@ -682,6 +708,11 @@ label {
   background-color: #f15a29;
 }
 
+.subscribe-visit-btn {
+  width: 350px !important;
+  margin-top: 38px !important;
+}
+
 .horizontal-scroll {
   overflow-x: none;
   white-space: wrap;
@@ -694,6 +725,17 @@ label {
     width: 65% !important;
     margin-right: 20px !important;
   }
+  .pipe {
+    width: 88%;
+    top: 45%;
+    height: 100%;
+  }
+}
+
+@media screen and (max-width: 340px) {
+  .pipe {
+    width: 88% !important;
+  }
 }
 
 @media screen and (max-width: 360px) {
@@ -702,8 +744,35 @@ label {
     padding: 0 !important;
   }
 
+  .input-label {
+    width: 300px !important;
+  }
+
   .default-title {
     font-size: 1.5rem !important;
+  }
+  .pipe {
+    top: 45%;
+    height: 100%;
+  }
+
+  .counter-bg h2 {
+    left: -30px !important;
+  }
+
+  .counter-bg p {
+    left: 35% !important;
+    bottom: -4%;
+    font-size: 30px !important;
+  }
+
+  .form-div-big .mc-field-group,
+  .form-div-big .button {
+    width: 95% !important;
+  }
+
+  .mc-field-group {
+    width: 300px !important;
   }
 
   .title-banner1 {
@@ -777,10 +846,23 @@ label {
   }
 }
 
+#mc-embedded-subscribe-form {
+  width: 100%;
+}
+
 @media screen and (max-width: 480px) {
   .timer-display {
     font-size: 1.3rem;
     text-align: start;
+  }
+
+  .mc-field-group {
+    width: 280px !important;
+  }
+
+  .subscribe-visit-btn {
+    width: 280px !important;
+    margin-top: 38px !important;
   }
 
   .building-description {
@@ -789,16 +871,32 @@ label {
     font-size: 0.5rem;
   }
 
+  .pipe {
+    width: 200px !important;
+    top: 45%;
+    height: 100%;
+  }
+
+  .counter-bg p {
+    left: 28% !important;
+    bottom: -4%;
+    font-size: 30px !important;
+  }
+
+  .counter-bg h2 {
+    left: -60px;
+  }
+
   .schedule-visit-btn {
     padding-top: 2%;
     margin-top: 5%;
     padding-bottom: 2% !important;
     margin-bottom: 5% !important;
     background-color: #736458;
-    border-radius: 0 !important;
-    font-size: 0.6rem !important;
+    font-size: 0.8rem !important;
     height: 35px !important;
     text-align: center;
+    width: 100% !important;
     vertical-align: middle;
     border: none;
   }
@@ -866,11 +964,7 @@ label {
     margin-bottom: 10%;
   }
 
-  .input-label {
-    width: 300px !important;
-  }
-
-  #cadastrar-button {
+  #mc-embedded-subscribe {
     width: 300px;
   }
 
@@ -879,12 +973,51 @@ label {
   }
 
   #days-missing {
-    font-size: 1.4rem !important;
+    font-size: 8rem !important;
     margin-bottom: 0;
   }
 
   #days-missing p {
     font-size: 3rem !important;
+  }
+}
+
+@media (min-width: 1366px) and (max-width: 4200px) {
+  .pipe {
+    width: 200px;
+  }
+}
+
+@media (min-width: 480px) and (max-width: 768px) {
+  .counter-bg h2 {
+    left: -100px;
+  }
+}
+
+@media (min-width: 440px) and (max-width: 480px) {
+  .counter-bg h2 {
+    left: -90px;
+  }
+}
+
+@media (min-width: 500px) and (max-width: 530px) {
+  .counter-bg h2 {
+    left: -110px;
+  }
+  .pipe {
+    width: 200px;
+  }
+}
+
+@media (min-width: 540px) and (max-width: 580px) {
+  .counter-bg h2 {
+    left: -150px;
+  }
+}
+
+@media (min-width: 800px) and (max-width: 1366px) {
+  .pipe {
+    width: 200px;
   }
 }
 
@@ -900,8 +1033,22 @@ label {
   }
 }
 
+@media (min-width: 1000px) and (max-width: 1366px) {
+  .counter-bg h2 {
+    left: 5%;
+  }
+}
+
 #days-missing {
-  font-size: 1.8rem;
+  font-size: 9rem;
+  text-align: center;
+  top: 12%;
+}
+
+.counter-bg p {
+  left: 20%;
+  bottom: -4%;
+  font-size: 30px;
 }
 
 #days-missing p {
@@ -914,11 +1061,25 @@ label {
 
 /* Fonts */
 
-.exo {
-  font-family: exo;
+.title-enphasis {
+  font-size: 1.4rem;
 }
+
+.accent-title {
+  font-size: 1.5rem;
+}
+
+.exo {
+  font-family: "Exo 2";
+}
+.exoBold {
+  font-family: "Exo 2";
+  font-weight: 900;
+}
+
 .exoItalic {
-  font-family: exoItalic;
+  font-family: "Exo 2";
+  font-style: italic;
 }
 .exoBoldItalic {
   font-family: exoBoldItalic;
@@ -928,16 +1089,6 @@ label {
 }
 .myriadProBold {
   font-family: myriadProBold;
-}
-
-@font-face {
-  font-family: exo;
-  src: url("../fonts/Exo2-Regular.otf");
-}
-
-@font-face {
-  font-family: exoItalic;
-  src: url("../fonts/Exo2-Italic.otf");
 }
 
 @font-face {
