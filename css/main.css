@@ -1,3 +1,8 @@
+@font-face {
+  font-family: exoBoldItalic;
+  src: url("../fonts/Exo-Bold-Italic.otf");
+}
+
 body {
   margin: 0;
   padding: 0;
@@ -312,7 +317,7 @@ label {
 
 #faltam {
   top: 10px !important;
-  transform: translateX(100%) !important;
+  transform: translateX(80%) !important;
   bottom: 0px !important;
 }
 
@@ -764,7 +769,7 @@ label {
 
   .counter-bg p {
     transform: translateX(120%) !important;
-    bottom: -4%;
+    bottom: -8%;
     font-size: 30px !important;
   }
 
@@ -964,6 +969,11 @@ label {
     width: 300px;
   }
 
+  #condicoes-especiais,
+  #avaliamos-receber {
+    left: 0;
+  }
+
   .secondary-title {
     font-size: 0.65rem !important;
   }
@@ -1020,6 +1030,88 @@ label {
   #days-missing {
     width: 100%;
   }
+  .blue-column {
+    left: 5%;
+    bottom: 0 !important;
+  }
+  .orange-bg {
+    left: 0;
+    bottom: 0 !important;
+  }
+}
+
+@media screen and (min-width: 700px) and (max-width: 990px) {
+  #imoveis-prontos {
+    padding-left: 0.2rem !important;
+  }
+  .orange-column {
+    transform: translateX(20%);
+  }
+  .blue-column {
+    transform: translateX(27%);
+  }
+  .blue-column {
+    left: 5%;
+    bottom: 0 !important;
+  }
+  .orange-bg {
+    left: 0;
+    bottom: 0 !important;
+  }
+}
+
+@media screen and (max-width: 320px) and (max-height: 576px) {
+  .counter-bg h2 {
+    transform: translateX(-10%) !important;
+  }
+  .blue-column {
+    left: 10%;
+    bottom: 0 !important;
+  }
+  .orange-column {
+    left: 0;
+    bottom: 0 !important;
+  }
+}
+
+@media screen and (min-width: 693px) and (min-height: 1349px) {
+  .blue-column {
+    left: 5%;
+    bottom: 0 !important;
+  }
+  #imoveis-prontos {
+    padding-left: 5px !important;
+  }
+  .orange-column {
+    left: 32% !important;
+    bottom: 0 !important;
+  }
+  .counter-bg h2 {
+    transform: translateX(-15%) !important;
+  }
+  .pipe {
+    width: 200px;
+  }
+  #mobile-hashtag {
+    position: absolute;
+    font-size: 2rem;
+    right: 5px !important;
+    bottom: 5px;
+    margin-right: -65px;
+  }
+  .blue-column {
+    top: -25px;
+    left: 200px;
+  }
+
+  .horizontal-scroll {
+    overflow-x: auto;
+    white-space: wrap;
+  }
+
+  #back-top a {
+    font-size: 1.5rem !important;
+  }
 }
 
 #days-missing {
@@ -1036,7 +1128,7 @@ label {
 
 .counter-bg #faltam {
   top: 4% !important;
-  font-size: 1.3rem;
+  font-size: 1.6rem;
   bottom: 0px !important;
 }
 
@@ -1082,19 +1174,4 @@ label {
 }
 .myriadProBold {
   font-family: myriadProBold;
-}
-
-@font-face {
-  font-family: exoBoldItalic;
-  src: url("../fonts/Exo-Bold-Italic.otf");
-}
-
-@font-face {
-  font-family: myriadPro;
-  src: url("../fonts/MyriadPro-Regular.otf");
-}
-
-@font-face {
-  font-family: myriadProBold;
-  src: url("../fonts/MyriadPro-Bold.otf");
 }
