@@ -310,6 +310,12 @@ label {
   left: 25px;
 }
 
+#faltam {
+  top: 10px !important;
+  transform: translateX(100%) !important;
+  bottom: 0px !important;
+}
+
 #condicoes-especiais h2 {
   text-align: center;
   font-size: 1.4rem;
@@ -756,12 +762,8 @@ label {
     height: 100%;
   }
 
-  .counter-bg h2 {
-    left: -30px !important;
-  }
-
   .counter-bg p {
-    left: 35% !important;
+    transform: translateX(120%) !important;
     bottom: -4%;
     font-size: 30px !important;
   }
@@ -856,6 +858,10 @@ label {
     text-align: start;
   }
 
+  .counter-bg h2 {
+    transform: translateX(-20%);
+  }
+
   .mc-field-group {
     width: 280px !important;
   }
@@ -875,16 +881,6 @@ label {
     width: 200px !important;
     top: 45%;
     height: 100%;
-  }
-
-  .counter-bg p {
-    left: 28% !important;
-    bottom: -4%;
-    font-size: 30px !important;
-  }
-
-  .counter-bg h2 {
-    left: -60px;
   }
 
   .schedule-visit-btn {
@@ -993,30 +989,12 @@ label {
   }
 }
 
-@media (min-width: 480px) and (max-width: 768px) {
-  .counter-bg h2 {
-    left: -100px;
-  }
-}
-
-@media (min-width: 440px) and (max-width: 480px) {
-  .counter-bg h2 {
-    left: -90px;
-  }
-}
-
 @media (min-width: 500px) and (max-width: 530px) {
-  .counter-bg h2 {
-    left: -110px;
-  }
   .pipe {
     width: 200px;
   }
-}
-
-@media (min-width: 540px) and (max-width: 580px) {
   .counter-bg h2 {
-    left: -150px;
+    transform: translateX(-29%);
   }
 }
 
@@ -1030,17 +1008,17 @@ label {
   .blue-column {
     top: -75%;
   }
+  .counter-bg h2 {
+    transform: translateX(-22%);
+  }
+  .pipe {
+    width: 200px !important;
+  }
 }
 
 @media screen and (max-width: 769px) {
   #days-missing {
     width: 100%;
-  }
-}
-
-@media (min-width: 1000px) and (max-width: 1366px) {
-  .counter-bg h2 {
-    left: 5%;
   }
 }
 
@@ -1051,9 +1029,15 @@ label {
 }
 
 .counter-bg p {
-  left: 20%;
+  transform: translateX(120%);
   bottom: -4%;
   font-size: 30px;
+}
+
+.counter-bg #faltam {
+  top: 4% !important;
+  font-size: 1.3rem;
+  bottom: 0px !important;
 }
 
 #days-missing p {
@@ -1062,6 +1046,10 @@ label {
 
 .yellow-text {
   color: yellow;
+}
+
+.pipe {
+  width: 200 !important;
 }
 
 /* Fonts */
