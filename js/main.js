@@ -67,7 +67,7 @@ $(document).ready(function() {
 
 function countDown() {
   // Set the date we're counting down to
-  var countDownDate = new Date(Date.parse("2018-11-22T24:00:00")).getTime();
+  var countDownDate = new Date(Date.parse("2018-11-22T24:00:00")).getTime(); //"2018-11-22T24:00:00"
   var finishDate = new Date(Date.parse("2018-11-26T10:00:00")).getTime();
 
   // Update the count down every 1 second
@@ -91,14 +91,24 @@ function countDown() {
     let dm = document.querySelector("#days-missing span");
     dm.textContent = days;
 
+    let title = document.querySelector("#title-banner-final");
+
+    if (days == 1) {
+      title.innerHTML =
+        '<span class="title-orange-text">COMEÇA AMANHÃ <br></span>O MAIOR FEIRÃO DE APARTAMENTOS, CASAS E LOTES QUE VOCÊ JÁ VIU.';
+    }
+
     // If the count down is finished, write some text
-    if (distance < 0) {
+    if (distance <= 0 || days <= 0) {
       clearInterval(x);
+      title.innerHTML =
+        "QUER UM IMÓVEL <br> PRONTO PARA  <br> MORAR JÁ? <br> A HORA É AGORA!";
       dm.textContent = "";
       $(".counter-bg").hide();
     } else {
       $("#feirao-comecou").hide();
     }
+    $(".show-last-day").show();
   }, 1000);
 }
 
@@ -123,12 +133,22 @@ function populateListOfBuildings() {
   bldParent.removeChild(buildingTemplate);
 }
 
+//,
+//  new Building(
+//    "../img/predios/casa-nova.jpg",
+//    "Condomínio CN Eusébio Boulevard I",
+//    "•	64,09m²  <br>•	2 quartos (1 suíte)  <br>•	1 vaga de garagem <br>•	Rua Vereda Tropical, s/n   Eusébio/CE",
+//    "../img/logos/casa-nova-logo.png",
+//    "https://feiraosindusconce.us19.list-manage.com/subscribe/post?u=0903e427b8d22f16c7b50b0a5&amp;id=475295a7c1",
+//    "b_0903e427b8d22f16c7b50b0a5_475295a7c1"
+//  )
+
 //lists of all buildings objects
 let list_of_buildings = [
   new Building(
     "../img/predios/base.png",
     "Essenza Residenziale Cocó",
-    "• 125,29m² e 126,34m²	1 suíte (com closet ou closet e sacada ou closet casal)  <br>•	3 vagas de garagem  <br>•	Rua Dr. Batista de Oliveira, 1023 - Cocó",
+    "• 125,29m² e 126,34m²<br>• 1 suíte (com closet ou closet e sacada ou closet casal)  <br>•	3 vagas de garagem  <br>•	Rua Dr. Batista de Oliveira, 1023 - Cocó",
     "../img/logos/base_logo.png",
     "https://feiraosindusconce.us19.list-manage.com/subscribe/post?u=0903e427b8d22f16c7b50b0a5&amp;id=194bc9a513",
     "b_0903e427b8d22f16c7b50b0a5_194bc9a513"
@@ -136,7 +156,7 @@ let list_of_buildings = [
   new Building(
     "../img/predios/bspar.jpg",
     "Marzzano Premium Residence",
-    "• 88m², 100m² e 117m²	2 ou 3 suítes  <br>•	2 vagas de garagem  <br>•	Rua Francisca Almeida de Souza, 255 Dunas",
+    "• 88m², 100m² e 117m² <br>• 2 ou 3 suítes  <br>•	2 vagas de garagem  <br>•	Rua Francisca Almeida de Souza, 255 <br> Dunas",
     "../img/logos/bspar_logo.png",
     "https://feiraosindusconce.us19.list-manage.com/subscribe/post?u=0903e427b8d22f16c7b50b0a5&amp;id=8218183ef4",
     "b_0903e427b8d22f16c7b50b0a5_8218183ef4"
@@ -152,7 +172,7 @@ let list_of_buildings = [
   new Building(
     "../img/predios/canopus.jpg",
     "Gran Village Messejana",
-    "•	48,04m² <br>•	2 quartos (1 suíte)  <br>•	1 vaga de garagem  <br>•	Rua Luiz Francisco Xavier, s/n Messejana",
+    "•	48,04m² <br>•	2 quartos (1 suíte)  <br>•	1 vaga de garagem  <br>•	Rua Luiz Francisco Xavier, s/n <br> Messejana",
     "../img/logos/canopus_logo.png",
     "https://feiraosindusconce.us19.list-manage.com/subscribe/post?u=0903e427b8d22f16c7b50b0a5&amp;id=997f7f96a7",
     "b_0903e427b8d22f16c7b50b0a5_997f7f96a7"
@@ -160,18 +180,10 @@ let list_of_buildings = [
   new Building(
     "../img/predios/carneiro.png",
     "Carmel Bosque Duo",
-    "•	229m² e 300m² <br>•	3 ou 4 suítes  <br>•	3 a 5 vagas de garagem  <br>•	Rua Francisco Matias, 267 - Sabiaguaba",
+    "•	229m² e 300m² <br>•	3 ou 4 suítes  <br>•	3 a 5 vagas de garagem  <br>•	Rua Francisco Matias, 267   Sabiaguaba",
     "../img/logos/carneiro-logo.png",
     "https://feiraosindusconce.us19.list-manage.com/subscribe/post?u=0903e427b8d22f16c7b50b0a5&amp;id=f516c5df03",
     "b_0903e427b8d22f16c7b50b0a5_f516c5df03"
-  ),
-  new Building(
-    "../img/predios/casa-nova.jpg",
-    "Condomínio CN Eusébio Boulevard I",
-    "•	64,09m²  <br>•	2 quartos (1 suíte)  <br>•	1 vagas de garagem <br>•	Rua Vereda Tropical, s/n - Eusébio/CE",
-    "../img/logos/casa-nova-logo.png",
-    "https://feiraosindusconce.us19.list-manage.com/subscribe/post?u=0903e427b8d22f16c7b50b0a5&amp;id=475295a7c1",
-    "b_0903e427b8d22f16c7b50b0a5_475295a7c1"
   ),
   new Building(
     "../img/predios/columbia.jpg",
@@ -184,7 +196,7 @@ let list_of_buildings = [
   new Building(
     "../img/predios/corinthus.jpg",
     "Edifício Fernando Rocha Residence",
-    "• 100,30m²	4 quartos (3 suítes, sendo 1 master e 1 reversível)  <br>•	2 ou 3 vagas de garagem  <br>•	Rua Ministro Abner Vasconcelos, 979, Sapiranga",
+    "• 100,30m² <br>•	4 quartos (3 suítes, sendo 1 master e 1 reversível)  <br>•	2 ou 3 vagas de garagem  <br>•	Rua Ministro Abner Vasconcelos, 979 <br> Sapiranga",
     "../img/logos/marca-corintus-logo.png",
     "https://feiraosindusconce.us19.list-manage.com/subscribe/post?u=0903e427b8d22f16c7b50b0a5&amp;id=bda7082afe",
     "b_0903e427b8d22f16c7b50b0a5_bda7082afe"
@@ -208,7 +220,7 @@ let list_of_buildings = [
   new Building(
     "../img/predios/enxegata.jpg",
     "Residencial Guararapes",
-    "•	71,67m², 77,78m² e 78,48m² <br>•	3 quartos (2 suítes, sendo 1 reversível) <br>•	2 vagas  <br>•	Rua Jaime Pinheiro, 130, Guararapes",
+    "•	71,67m², 77,78m² e 78,48m² <br>•	3 quartos (2 suítes, sendo 1 reversível) <br>•	2 vagas  <br>•	Rua Jaime Pinheiro  130 Guararapes",
     "../img/logos/engexata_logo.png",
     "https://feiraosindusconce.us19.list-manage.com/subscribe/post?u=0903e427b8d22f16c7b50b0a5&amp;id=33fdd291ec",
     "b_0903e427b8d22f16c7b50b0a5_33fdd291ec"
@@ -216,7 +228,7 @@ let list_of_buildings = [
   new Building(
     "../img/predios/habitus.jpg",
     "Condomínio Jacarandá",
-    "• 73,5m² e 108m²	<br>• 3 quartos (2 suítes e 1 quarto gabinete) <br>•	2 vagas de garagem  <br>•	Rua Bahia, 26 Parque Havaí - Eusébio/CE",
+    "• 73,5m² e 108m²	<br>• 3 quartos (2 suítes e 1 quarto gabinete) <br>•	2 vagas de garagem  <br>•	Rua Bahia, 26 Parque Havaí   Eusébio/CE",
     "../img/logos/habitus-logo.png",
     "https://feiraosindusconce.us19.list-manage.com/subscribe/post?u=0903e427b8d22f16c7b50b0a5&amp;id=d25a6b5706",
     "b_0903e427b8d22f16c7b50b0a5_d25a6b5706"
@@ -232,7 +244,7 @@ let list_of_buildings = [
   new Building(
     "../img/predios/jsimoes.jpg",
     "Absoluto Parque do Cocó",
-    "•	154,53m² e 158,52m²  <br>•	3 suítes <br>•	3 vagas de garagem  <br>•	Rua Israel Bezerra, 1090 Cocó",
+    "•	154,53m² e 158,52m²  <br>•	3 suítes <br>•	3 vagas de garagem  <br>•	Rua Israel Bezerra, 1090 <br>Cocó",
     "../img/logos/jsimoes_logo.png",
     "https://feiraosindusconce.us19.list-manage.com/subscribe/post?u=0903e427b8d22f16c7b50b0a5&amp;id=3aa1a86a77",
     "b_0903e427b8d22f16c7b50b0a5_3aa1a86a77"
@@ -240,7 +252,7 @@ let list_of_buildings = [
   new Building(
     "../img/predios/jatahy.jpg",
     "Edifício Cidade",
-    "•	53, 44m² e 64,72m² <br>• 2 ou 3 quartos (1 suíte) <br>• 1 ou 2 vagas de garagem <br>• Rua Guilherme Rocha, 1299 Centro ",
+    "•	53,44m² e 64,72m² <br>• 2 ou 3 quartos (1 suíte) <br>• 1 ou 2 vagas de garagem <br>• Rua Guilherme Rocha, 1299 Centro ",
     "../img/logos/jatahy-logo.png",
     "https://feiraosindusconce.us19.list-manage.com/subscribe/post?u=0903e427b8d22f16c7b50b0a5&amp;id=b834f9e89f",
     "b_0903e427b8d22f16c7b50b0a5_b834f9e89f"
@@ -248,15 +260,23 @@ let list_of_buildings = [
   new Building(
     "../img/predios/jvs.png",
     "Monte Olimpo 2",
-    "•	De 145,28m² até 210,61m²  <br>•	3 ou 4 quartos (3 ou 4 suítes)  <br>•	2 a 4 vagas de garagem<br>•	Rua Melo César, 801 Cidade dos Funcionários",
+    "•	De 145,28m² até 210,61m²  <br>•	3 ou 4 quartos (3 ou 4 suítes)  <br>•	2 a 4 vagas de garagem<br>•	Rua Melo César, 801 <br> Cidade dos Funcionários",
     "../img/logos/jvs_logo.png",
     "https://feiraosindusconce.us19.list-manage.com/subscribe/post?u=0903e427b8d22f16c7b50b0a5&amp;id=42c409853d",
     "b_0903e427b8d22f16c7b50b0a5_42c409853d"
   ),
   new Building(
+    "../img/predios/magis.png",
+    "Talassa Dunas Residence",
+    "•	61,86m² e 75,23m²  <br>•	2 ou 3 quartos (1 suíte)  <br>•	2 vagas de garagem<br>•	Av. Engenheiro Luís Vieira, 800 - Dunas",
+    "../img/logos/magis-logo.png",
+    "https://feiraosindusconce.us19.list-manage.com/subscribe/post?u=0903e427b8d22f16c7b50b0a5&amp;id=7294698160",
+    "b_0903e427b8d22f16c7b50b0a5_7294698160"
+  ),
+  new Building(
     "../img/predios/mendoca-marbella.png",
     "Marbella Home Club",
-    "•	110,03m²  <br>•	3 suítes(varanda gourmet) <br>•	2 vaga de garagem  <br>•	Rua Antônio Augusto, 1700 Aldeota",
+    "•	110,03m²  <br>•	3 suítes (varanda gourmet) <br>•	2 vagas de garagem  <br>•	Rua Antônio Augusto, 1700 Aldeota",
     "../img/logos/mendonca-logo.png",
     "https://feiraosindusconce.us19.list-manage.com/subscribe/post?u=0903e427b8d22f16c7b50b0a5&amp;id=6b5a71793e",
     "b_0903e427b8d22f16c7b50b0a5_6b5a71793e"
@@ -272,7 +292,7 @@ let list_of_buildings = [
   new Building(
     "../img/predios/mota-machado.jpg",
     "Reservatto Condomínio Parque",
-    "• 74,05m²	2 ou 3 quartos (2 suítes) <br>•	2 vagas de garagem  <br>•	Rua Luíza Miranda Coelho, 1130 Guararapes",
+    "• 74,05m²	<br>• 2 ou 3 quartos (2 suítes) <br>•	2 vagas de garagem  <br>•	Rua Luíza Miranda Coelho, 1130 <br> Guararapes",
     "../img/logos/mota-machado-logo.png",
     "https://feiraosindusconce.us19.list-manage.com/subscribe/post?u=0903e427b8d22f16c7b50b0a5&amp;id=73c24a94bf",
     "b_0903e427b8d22f16c7b50b0a5_73c24a94bf"
@@ -280,7 +300,7 @@ let list_of_buildings = [
   new Building(
     "../img/predios/moura-dubeaux.jpg",
     "Metropolitan Central Park",
-    "• 94m², 109m² e 130m² <br>•	2 ou 3 suítes <br>•	2 vagas de garagem  <br>•	Rua Artista Plástico Joaquim de Souza, 101 Papicu",
+    "• 94m², 109m² e 130m² <br>•	2 ou 3 suítes <br>•	2 vagas de garagem  <br>•	Rua Artista Plástico Joaquim de Souza, 101<br> Papicu",
     "../img/logos/moura-dubeux-engenharia-original_logo.png",
     "https://feiraosindusconce.us19.list-manage.com/subscribe/post?u=0903e427b8d22f16c7b50b0a5&amp;id=05b49c9091",
     "b_0903e427b8d22f16c7b50b0a5_05b49c9091"
@@ -296,7 +316,7 @@ let list_of_buildings = [
   new Building(
     "../img/predios/muza.jpg",
     "Residencial Villa Firenze",
-    "•	59,71 m² e 65,75 m²  <br>•	2 e 3 quartos <br>•	1 vaga de garagem  <br>•	Rua Cel. João de Oliveira, 555, Cambeba",
+    "•	59,71 m² e 65,75 m²  <br>•	2 e 3 quartos <br>•	1 vaga de garagem  <br>•	Rua Cel. João de Oliveira, 555  Cambeba",
     "../img/logos/muz_logo.png",
     "https://feiraosindusconce.us19.list-manage.com/subscribe/post?u=0903e427b8d22f16c7b50b0a5&amp;id=3630f2a797",
     "b_0903e427b8d22f16c7b50b0a5_3630f2a797"
@@ -304,7 +324,7 @@ let list_of_buildings = [
   new Building(
     "../img/predios/novaes.jpg",
     "Viva La Vida Park Residence",
-    "•	95m², 116m² e 126m²  <br>•	3 suítes <br>•	2 vagas de garagem  <br>•	Rua Evaristo da Veiga 140 Parque Del Sol Cidade dos Funcionários",
+    "•	95,10m², 116,44m², 126,09m² e 126,73m² <br>• 3 ou 4 quartos	(3 suítes) <br>•	2 vagas de garagem  <br>•	Rua Evaristo da Veiga 140 Parque Del Sol<br> Cidade dos Funcionários",
     "../img/logos/novaes-logo.png",
     "https://feiraosindusconce.us19.list-manage.com/subscribe/post?u=0903e427b8d22f16c7b50b0a5&amp;id=f20f01c8fc",
     "b_0903e427b8d22f16c7b50b0a5_f20f01c8fc"
@@ -312,7 +332,7 @@ let list_of_buildings = [
   new Building(
     "../img/predios/placic.jpg",
     "Promenade Aldeota",
-    "•	158,26m²  <br>•	3 suítes + 1 gabinete com WC reversível <br>•	3 vagas de garagem  <br>•	Rua Carolina Sucupira, 400 - Aldeota",
+    "•	158,26m²  <br>•	3 suítes + 1 gabinete com WC reversível <br>•	3 vagas de garagem  <br>•	Rua Carolina Sucupira, 400   Aldeota",
     "../img/logos/placic_logo.png",
     "https://feiraosindusconce.us19.list-manage.com/subscribe/post?u=0903e427b8d22f16c7b50b0a5&amp;id=6594f50c5c",
     "b_0903e427b8d22f16c7b50b0a5_6594f50c5c"
@@ -320,7 +340,7 @@ let list_of_buildings = [
   new Building(
     "../img/predios/porto-freire.jpg",
     "Villa Gaudí",
-    "•	60m² e 86m²  <br>•	2 ou 3 quartos (1 ou 2 suítes) e 1 WC Social  <br>•	1 ou 2 vagas de garagem  <br>• Rua Alódia, 203 Cidade dos Funcionários",
+    "•	60m² e 86m²  <br>•	2 ou 3 quartos (1 ou 2 suítes) e 1 WC Social  <br>•	1 ou 2 vagas de garagem  <br>• Rua Alódia, 203 <br>Cidade dos Funcionários",
     "../img/logos/porto-freire-logo.png",
     "https://feiraosindusconce.us19.list-manage.com/subscribe/post?u=0903e427b8d22f16c7b50b0a5&amp;id=bff604599f",
     "b_0903e427b8d22f16c7b50b0a5_bff604599f"
@@ -336,7 +356,7 @@ let list_of_buildings = [
   new Building(
     "../img/predios/riomar.jpg",
     "Empresarial RioMar Trade Center ",
-    "•	Empreendimento pronto  <br>• Integrado do Shopping  <br>•	302 unidades <br>•	Salas a partir de 33m²<br>•	Rua Desembargador Lauro Nogueira, 1500 Papicu",
+    "•	Empreendimento pronto  <br>• Integrado do Shopping  <br>•	302 unidades <br>•	Salas a partir de 33m²<br>•	Rua Desembargador Lauro Nogueira, 1500 <br>Papicu",
     "../img/logos/riomar-logo.png",
     "https://feiraosindusconce.us19.list-manage.com/subscribe/post?u=0903e427b8d22f16c7b50b0a5&amp;id=368aae53f7",
     "b_0903e427b8d22f16c7b50b0a5_368aae53f7"
@@ -344,7 +364,7 @@ let list_of_buildings = [
   new Building(
     "../img/predios/terra-brasilis.jpg",
     "Reserva Terra Brasilis",
-    "•	Lotes a partir de 300m²<br>•	Loteamento fechado de alto padrão <br>•	Rodovia CE-040,	Km 12 (Próximo ao Circo Tupiniquim)",
+    "•	Lotes a partir de 300m²<br>•	Loteamento fechado de alto padrão <br>•	Rodovia CE-040,	Km 12 (Próximo ao Circo Tupiniquim) Aquiraz/CE ",
     "../img/logos/terra-brasilis-logo.png",
     "https://feiraosindusconce.us19.list-manage.com/subscribe/post?u=0903e427b8d22f16c7b50b0a5&amp;id=bbb6912260",
     "b_0903e427b8d22f16c7b50b0a5_bbb6912260"

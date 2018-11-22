@@ -19,6 +19,17 @@ html {
   overflow-x: hidden;
 }
 
+#feirao-comecou {
+  font-size: 1.5rem;
+  margin-top: -30px;
+  margin-left: -25px;
+}
+
+#title-banner-final {
+  font-size: 3rem;
+  line-height: 3rem;
+}
+
 .screen4-background {
   background-color: #f15a29;
 }
@@ -113,7 +124,7 @@ label {
   background-size: cover;
 }
 #photo-2 {
-  background-image: url("../img/photo-2.png");
+  background-image: url("../img/photo-2.jpeg");
   background-repeat: no-repeat;
   background-size: cover;
 }
@@ -317,8 +328,12 @@ label {
 
 #faltam {
   top: 10px !important;
-  transform: translateX(80%) !important;
+  transform: translateX(120%) !important;
   bottom: 0px !important;
+}
+
+.counter-bg p {
+  transform: translateX(180%) !important;
 }
 
 #condicoes-especiais h2 {
@@ -470,8 +485,8 @@ label {
 }
 
 #title-banner1 {
-  width: 68%;
-  font-size: 3rem;
+  width: 72%;
+  font-size: 2.9rem;
   line-height: 3.2rem;
 }
 
@@ -729,6 +744,10 @@ label {
   white-space: wrap;
 }
 
+.counter-bg h2 {
+  transform: translateX(10%);
+}
+
 @media screen and (max-width: 320px) {
   #title-banner1 {
     font-size: 1.1rem !important;
@@ -740,6 +759,9 @@ label {
     width: 88%;
     top: 45%;
     height: 100%;
+  }
+  .marca-img {
+    transform: translateX(75%);
   }
 }
 
@@ -771,6 +793,10 @@ label {
     transform: translateX(120%) !important;
     bottom: -8%;
     font-size: 30px !important;
+  }
+
+  .marca-img {
+    transform: translateX(95%);
   }
 
   .form-div-big .mc-field-group,
@@ -861,6 +887,18 @@ label {
   .timer-display {
     font-size: 1.3rem;
     text-align: start;
+  }
+  #title-banner-final {
+    font-size: 2rem;
+    line-height: 2rem;
+    left: -12%;
+  }
+
+  #feirao-comecou {
+    font-size: 0.8rem;
+    margin-top: 30px;
+    margin-left: -5%;
+    width: 75%;
   }
 
   .counter-bg h2 {
@@ -1038,6 +1076,16 @@ label {
     left: 0;
     bottom: 0 !important;
   }
+  #title-banner-final {
+    margin-top: 80px;
+  }
+
+  #feirao-comecou {
+    font-size: 1.5rem;
+    margin-top: 150px;
+    margin-left: 5%;
+    width: 75%;
+  }
 }
 
 @media screen and (min-width: 700px) and (max-width: 990px) {
@@ -1058,6 +1106,26 @@ label {
     left: 0;
     bottom: 0 !important;
   }
+  .marca-img {
+    transform: translateX(275%);
+  }
+
+  #feirao-comecou {
+    font-size: 1rem;
+    margin-top: 80px;
+    margin-left: 0;
+    width: 75%;
+  }
+}
+
+.title-orange-text {
+  color: #f7941d;
+}
+
+@media screen and (min-width: 370px) and (max-width: 800px) {
+  .marca-img {
+    transform: translateX(200%);
+  }
 }
 
 @media screen and (max-width: 320px) and (max-height: 576px) {
@@ -1072,12 +1140,33 @@ label {
     left: 0;
     bottom: 0 !important;
   }
+  .banner {
+    background-image: url("../img/first-panel-mobile-bg.png");
+    background-position-x: -80px !important;
+  }
+  .marca-img {
+    transform: translateX(75%);
+  }
+  #feirao-comecou {
+    font-size: 1.5rem;
+    margin-left: -10px;
+    margin-top: 25px !important;
+  }
+
+  #title-banner-final {
+    font-size: 2.5rem;
+    line-height: 2.5rem;
+  }
 }
 
 @media screen and (min-width: 693px) and (min-height: 1349px) {
   .blue-column {
     left: 5%;
     bottom: 0 !important;
+  }
+  #feirao-comecou {
+    width: 100%;
+    font-size: 1.8rem;
   }
   #imoveis-prontos {
     padding-left: 5px !important;
@@ -1088,6 +1177,9 @@ label {
   }
   .counter-bg h2 {
     transform: translateX(-15%) !important;
+  }
+  .marca-img {
+    transform: translateX(175%) !important;
   }
   .pipe {
     width: 200px;
@@ -1104,6 +1196,10 @@ label {
     left: 200px;
   }
 
+  .marca-img {
+    transform: translateX(95%);
+  }
+
   .horizontal-scroll {
     overflow-x: auto;
     white-space: wrap;
@@ -1111,6 +1207,37 @@ label {
 
   #back-top a {
     font-size: 1.5rem !important;
+  }
+}
+
+@media screen and (min-width: 360px) and (max-width: 860px) {
+  .banner {
+    background-image: url("../img/first-panel-tablet-bg.png");
+  }
+  #feirao-comecou {
+    font-size: 1.5rem;
+    margin-left: -10px;
+    margin-top: 25px;
+  }
+  #title-banner-final {
+    margin-top: -30px;
+  }
+}
+
+@media screen and (min-width: 1920px) and (min-height: 1080px) {
+  .banner {
+    background-position-y: -200px;
+  }
+}
+
+@media screen and (min-width: 1400px) and (max-width: 2000px) {
+  .building-description {
+    font-size: 0.55rem;
+    line-height: 0.55rem;
+  }
+  .building-title {
+    font-size: 0.7rem;
+    line-height: 0.65rem;
   }
 }
 

@@ -4,10 +4,7 @@
     <title>Sinduscon</title>
     <!-- Required meta tags -->
     <meta charset="utf-8" />
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1, shrink-to-fit=no"
-    />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no, minimum-scale=1"/>
     <link href="https://fonts.googleapis.com/css?family=Exo+2:400,400i,700i" rel="stylesheet"> 
     <link rel="shortcut icon" type="image/png" href="img/sinduscon-logo.png"/>
     <!-- Bootstrap CSS -->
@@ -74,7 +71,7 @@
               </div>
                 <!-- Begin Mailchimp Signup Form -->
                 <div id="mc_embed_signup" class="ml-3 col-lg-8 col-sm-4 w-100 pb-5">
-                    <form action="https://feiraosindusconce.us19.list-manage.com/subscribe/post?u=0903e427b8d22f16c7b50b0a5&amp;id=d21c98a274" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate row d-flex flex-column p-0 pl-lg-5 justify-content-center" target="_blank" novalidate>
+                    <form action="https://feiraosindusconce.us19.list-manage.com/subscribe/post?u=0903e427b8d22f16c7b50b0a5&amp;id=d21c98a274" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate row d-flex flex-column p-0 justify-content-center" target="_blank" novalidate>
                       <div class="col-12 px-0 form-div-big">
                           <div class="mc-field-group">
                               <label for="mce-FNAME" class="input-label text-uppercase exo">nome: </label>
@@ -149,19 +146,21 @@
               class="text-uppercase mx-lg-auto text-white exoBoldItalic"
               id="title-banner1"
             >
-            O Sindicato das Construtoras traz pra você o maior feirão de apartamentos, casas e lotes. Aproveite.
             </h2>
+            <h2 class="text-uppercase col-lg-10 col-12 mx-lg-auto text-white exoBoldItalic"
+                id="title-banner-final">
+              </h2>
             <div class="row d-flex flex-column flex-nowrap mx-auto px-sm-0 mx-sm-0">
               <div class="col-lg-2 p-0"></div>
               <div class="col-lg-9 pl-lg-3 col-sm-6 text-lg-start px-0 mx-lg-auto col-lg-4 p-lg-0">
                   <div class=" counter-bg">
                       <div class="pipe"></div>
-                      <h1 id="faltam" class="text-white position-absolute exoItalic"> Faltam</h1>
+                      <h1 id="faltam" class="text-white position-absolute exoItalic">   Falta</h1>
                       <h2 class="text-uppercase text-white position-absolute exoBoldItalic" id="days-missing">0<span>5</span> </h2>
                     
-                      <p class="text-white position-absolute exoItalic"> dias</p>
+                      <p class="text-white position-absolute exoItalic">   dia</p>
                   </div>
-                  <h2 class="text-uppercase pt-lg-5 text-white exoBoldItalic" id="feirao-comecou">Venha já! <br> O feirão já começou!</h2>
+                  <h2 class="text-uppercase pt-lg-5 text-white exoBoldItalic" id="feirao-comecou">22 a 25 de nov <br> <span class="yellow-text">shopping rio mar fortaleza </span><br>piso l3 - ao lado do orgânico</h2>
               </div>
               <div class="col-lg-2"></div>
 
@@ -169,7 +168,8 @@
           </div>
           <div class="row pb-lg-5"></div>
           <div class="row pb-lg-5"></div>
-
+          <div class="row pb-5 show-last-day"></div>
+          <div class="row pb-5 show-last-day"></div>
         </div>
 
         <div class="col-lg-2"></div>
@@ -414,7 +414,7 @@
             class="text-white text-center exoBoldItalic mt-5"
             id="receba-informacoes"
           >
-            RECEBA INFORMAÇÕES DO FEIRÃO SINDUSCON 2018
+            RECEBA INFORMAÇÕES DO FEIRÃO DO SINDUSCON
           </p>
         </div>
       </div>
@@ -478,9 +478,9 @@
           </p>
         </div>
       </div>
-      <div class="row mt-5 mb-5 horizontal-scroll">
+      <div class="row mt-5 mb-5" id="logos-container">
         <!-- marcas linha 1 -->
-        <div class="col-lg-12 d-flex mb-4 flex-row  justify-content-between">
+        <div class="col-lg-12 d-flex mb-4 mx-auto flex-lg-row flex-column justify-content-lg-between">
           <div class="marca-container">
             <div
               class="marca-img"
@@ -531,7 +531,7 @@
           </div>
         </div>
         <!-- marcas linha 2 -->
-        <div class="col-lg-12 d-flex mb-4 flex-row  justify-content-between">
+        <div class="col-lg-12 d-flex mb-4 flex-lg-row flex-column justify-content-lg-between">
           <div class="marca-container">
             <div
               class="marca-img"
@@ -582,8 +582,14 @@
           </div>
         </div>
         <!-- marcas linha 3 -->
-        <div class="col-lg-12 d-flex mb-4 flex-row  justify-content-between">
-            <div class="marca-container">
+        <div class="col-lg-12 d-flex mb-4 flex-lg-row flex-column justify-content-lg-between">
+              <div class="marca-container">
+                <div
+                  class="marca-img"
+                  style="background-image: url('/img/logos/magis-logo.png')"
+                ></div>
+              </div>
+              <div class="marca-container">
                 <div
                   class="marca-img"
                   style="background-image: url('/img/logos/mendonca-logo.png')"
@@ -626,15 +632,15 @@
                   style="background-image: url('/img/logos/novaes-logo.png')"
                 ></div>
               </div>
-              <div class="marca-container">
-                <div
-                  class="marca-img"
-                  style="background-image: url('/img/logos/placic_logo.png')"
-                ></div>
-              </div>
         </div>
         <!-- marcas linha 4 -->
-        <div class="col-lg-12 d-flex mb-4 flex-row  justify-content-between">
+        <div class="col-lg-12 d-flex mb-4 flex-lg-row  flex-column justify-content-lg-between">
+          <div class="marca-container">
+            <div
+              class="marca-img"
+              style="background-image: url('/img/logos/placic_logo.png')"
+            ></div>
+          </div>
           <div class="marca-container">
             <div class="marca-img"  
                  style="background-image: url('/img/logos/porto-freire-logo.png')"
@@ -655,7 +661,15 @@
                   style="background-image: url('/img/logos/terra-brasilis-logo.png')"
             ></div>
           </div>
-          <div class="marca-container">
+          <div class="marca-container d-none">
+            <div class="marca-img"  
+            ></div>
+          </div>
+          <div class="marca-container d-none">
+            <div class="marca-img"  
+            ></div>
+          </div>
+          <div class="marca-container d-none">
             <div class="marca-img"  
             ></div>
           </div>
@@ -663,92 +677,6 @@
             <div class="marca-img"  
             ></div>
           </div>
-          <div class="marca-container">
-            <div class="marca-img"  
-            ></div>
-          </div>
-          <div class="marca-container">
-            <div class="marca-img"  
-            ></div>
-          </div>
-        </div>
-        <!-- marcas linha 5 -->
-        <div class="col-lg-12 d-none h-0 d-flex mb-4 flex-row  justify-content-between">
-          <div class="marca-container">
-            <div class="marca-img d-none border-img"></div>
-          </div>
-          <div class="marca-container">
-            <div class="marca-img d-none border-img"></div>
-          </div>
-          <div class="marca-container">
-            <div class="marca-img d-none border-img"></div>
-          </div>
-          <div class="marca-container">
-            <div class="marca-img d-none border-img"></div>
-          </div>
-          <div class="marca-container">
-            <div class="marca-img d-none border-img"></div>
-          </div>
-          <div class="marca-container">
-            <div class="marca-img d-none border-img"></div>
-          </div>
-          <div class="marca-container">
-            <div class="marca-img d-none border-img"></div>
-          </div>
-          <div class="marca-container">
-            <div class="marca-img d-none border-img"></div>
-          </div>
-        </div>
-        <!-- marcas linha 6 -->
-        <div class="col-lg-12 d-none h-0 d-flex mb-4 flex-row  justify-content-between">
-          <div class="marca-container">
-            <div class="marca-img d-none border-img"></div>
-          </div>
-          <div class="marca-container">
-            <div class="marca-img d-none border-img"></div>
-          </div>
-          <div class="marca-container">
-            <div class="marca-img d-none border-img"></div>
-          </div>
-          <div class="marca-container">
-            <div class="marca-img d-none border-img"></div>
-          </div>
-          <div class="marca-container">
-            <div class="marca-img d-none border-img"></div>
-          </div>
-          <div class="marca-container">
-            <div class="marca-img d-none border-img"></div>
-          </div>
-          <div class="marca-container">
-            <div class="marca-img d-none border-img"></div>
-          </div>
-          <div class="marca-container">
-            <div class="marca-img d-none"></div></div>
-        </div>
-        <!-- marcas linha 7 - ultima -->
-        <div class="col-lg-12 d-none h-0 d-flex mb-4 flex-row  justify-content-between">
-          <div class="marca-container">
-            <div class="marca-img d-none border-img"></div>
-          </div>
-          <div class="marca-container">
-            <div class="marca-img d-none border-img"></div>
-          </div>
-          <div class="marca-container">
-            <div class="marca-img d-none border-img"></div>
-          </div>
-          <div class="marca-container">
-            <div class="marca-img d-none border-img"></div>
-          </div>
-          <div class="marca-container">
-            <div class="marca-img d-none border-img"></div>
-          </div>
-          <div class="marca-container">
-            <div class="marca-img d-none border-img"></div>
-          </div>
-          <div class="marca-container">
-            <div class="marca-img d-none border-img"></div>
-          </div>
-          <div class="marca-container"><div class="marca-img d-none"></div></div>
         </div>
       </div>
       
@@ -759,7 +687,7 @@
       <div class="row blue-bg">
         <div class="col">
           <p class="text-white exoBoldItalic text-center my-4 default-title">
-            ESPAÇO FEIRÃO SINDUSCON 2018
+            ESPAÇO FEIRÃO DO SINDUSCON
           </p>
         </div>
       </div>
@@ -924,11 +852,11 @@
     <div class="container-fluid h-100 bright-orange-bg pb-5">
         <div class="row p-3 pb-0">
             <div class="col-12">
-                <p class="text-white text-uppercase exoBoldItalic default-title text-center"> empresas parceiras do feirão sinduscon ce
+                <p class="text-white text-uppercase exoBoldItalic default-title text-center"> empresas parceiras do feirão do sinduscon
                 </p>
               </div>
           </div>
-          <div class="col-lg-12 d-flex flex-lg-row flex-column">
+          <div class="row h-100 d-flex flex-lg-row flex-column">
             <div class="col-lg-4 col-12 pb-lg-0 pb-5">
               <img class="img-fluid" src="/img/parceiros-locktec.jpg">
             </div>
@@ -956,28 +884,28 @@
                 <div class="col-lg-4 col-12 p-0 pr-lg-4 text-white exoItalic">
                   <p class="exoBold enphasis pb-lg-1 accent-title">22/11 - Quinta-feira </p>
                      <span>
-                      <span class="exoBold"> 16 h</span> - Comprei meu imóvel e agora?" Próximos passos para registro do imóvel, documentação, cálculo de emolumentos, ITBI e benefícios do primeiro imóvel. <br>
+                      <span class="exoBold"> 16 h</span> - "Comprei meu imóvel. E agora?". Próximos passos para registro do imóvel, documentação, cálculo de emolumentos, ITBI e benefícios do primeiro imóvel. <br>
                       <span class="exoBold">Palestrante: Sinduscon Jovem CE.</span>         <br> <br>
                       <span class="exoBold"> 17 h </span> - SFH, SBPE, FGTS (resgate e regras) e cálculo do subsídio MCMV. <br> 
-                      <span class="exoBold"> Palestrante: Sinduscon Jovem CE e Josivan Josino (CAIXA). </span>
+                      <span class="exoBold"> Palestrante: Sinduscon Jovem CE e Josivan Josino (Gerente Regional da Construção Civil SR Fortaleza - CAIXA). </span>
                       <br> <br>
                       <span class="exoBold"> 18 h </span> - Aumento da segurança na portaria e redução de custo no condomínio. <br>
                       <span class="exoBold"> Palestrante: Locktec. </span> <br><br> 
-                      <span class="exoBold"> 20 h </span> - Planjamento Financeiro Familiar. <br> <span class="exoBold"> Palestrante: Lilian Marques. </span>
+                      <span class="exoBold"> 20 h </span> - Planejamento Financeiro Familiar. <br> <span class="exoBold"> Palestrante: Lilian Marques. </span>
                       <br> <br>
                     </span> 
                   <p class="exoBold enphasis pb-lg-1 accent-title">23/11 - Sexta-feira</p> 
                     <span>
                       <span class="exoBold"> 16 h </span> - Valorização do imóvel em um período superior a 10 anos x CDI. <br>
-                      <span class="exoBold"> Palestrante: Sinduscon Jovem CE e Conceito Ivestimentos.
+                      <span class="exoBold"> Palestrante: Sinduscon Jovem CE e Conceito Investimentos.
                         </span>
                       <br> <br>
-                      <span class="exoBold"> 17 h </span> - Como declarar imóvel pronto durante aquisição na DIRPF. <br>
-                      <span class="exoBold"> Palestrante: Sinduscon Jovem CE.
+                      <span class="exoBold"> 17 h </span> - Produtos CAIXA para financiamento imobiliário. <br>
+                      <span class="exoBold"> Palestrante: Rodrigo Quental (Gerente executivo da GEHAB-FO - CAIXA) e Roberto César (Coordenador de filial Ge. Neg. Habitação Fortaleza-CE - CAIXA).
                         </span>
                       <br> <br>
-                      <span class="exoBold"> 18 h </span> - Produtos CAIXA para financiamento imobiliário. <br>
-                      <span class="exoBold"> Palestrante: Rodrigo Quental e Roberto César (CAIXA). </span>
+                      <span class="exoBold"> 18 h </span> - Como declarar imóvel pronto durante aquisição na DIRPF. <br>
+                      <span class="exoBold"> Palestrante: Sinduscon Jovem CE. </span>
                       <br> <br>
                       <span class="exoBold"> 20 h </span> - Personal Stylist - Descubra suas cores e potencialize seus looks. <br>
                       <span class="exoBold"> Palestrante: Aiala Lago e Karine Mendonça. </span>
@@ -992,10 +920,10 @@
                      <span class="exoBold"> Palestrante: SOS Organização. </span>
                      <br> <br>
                      <span class="exoBold"> 17 h </span> - Experiências com projetos de arquitetura - Planejar para economizar. <br> 
-                     <span class="exoBold"> Palestrante: Susana Fiuza. </span>
+                     <span class="exoBold"> Palestrante: Susana Fiúza. </span>
                      <br> <br>
                      <span class="exoBold"> 18 h </span> - Cervejaria Artesanal: do hobby em casa para um mercado em alta. <br>
-                     <span class="exoBold"> Palestrante: Cervejaria Luzter - Eduardo Lopes e Fernando Pinheiro. </span>
+                     <span class="exoBold"> Palestrante:  Cervejaria Luzter (Eduardo Lopes e Fernando Pinheiro). </span>
                      <br> <br>
                    </span>
                  <p class="exoBold enphasis pb-lg-1 accent-title">25/11 - Domingo</p> 
@@ -1012,6 +940,21 @@
                  </p>
                 </div>
             </div>
+      </div>
+
+        <!-- Palestras botão -->
+      <div class="container-fluid h-100">
+        <div class="row blue-bg">
+            <div class="col-12 p-5 text-center">
+              <div class="btn px-5 light-blue-bg">
+                  <a
+                  href="https://goo.gl/forms/j8Leg5IytWBQeVnM2"
+                  class="text-white mx-auto text-uppercase nounderline text-center exoBoldItalic secondary-title"
+                  >inscreva-se</a
+                  >
+              </div>
+            </div>
+          </div>
       </div>
     
     <!-- Tela 10 Hidden with js -->
@@ -1083,7 +1026,7 @@
       <div class="row p-5 pb-lg-0">
         <div class="col-12">
           <p class="orange-text exoBoldItalic default-title text-center">
-            CONHEÇA TODAS AS OFERTAS DO FEIRÃO SINDUSCON
+            CONHEÇA TODAS AS OFERTAS DO FEIRÃO DO SINDUSCON
           </p>
         </div>
       </div>
@@ -1133,8 +1076,8 @@
         </div>
       </div>
        -->
-      <div class="row">
-        <div class="col-12 p-5">
+      <div class="row px-5">
+        <div class="col-12">
           <p class="blue-text text-center exoBoldItalic default-title">
             <span class="orange-text">#</span>pronto<span class="orange-text"
               >pra</span
@@ -1142,24 +1085,32 @@
           </p>
         </div>
       </div>
-      <div class="row pb-5 justify-content-center">
-        <div class="col-lg-1"></div>
-        <div class="col-lg-2 col-12">
-          <img src="/img/sinduscon-logo.png" class="img-fluid" />
-        </div>
-        <div class="col-lg-2 col-12">
-          <img src="/img/apoio-caixa.png" class="img-fluid" />
-        </div>
-        <div class="col-lg-2 col-12">
-          <img src="/img/patrocinio-senai.png" class="img-fluid" />
-        </div>
-        <div class="col-lg-2 col-12">
-          <img src="/img/realizacao-svm.png" class="img-fluid" />
-        </div>
-        <div class="col-lg-2 col-12">
-          <img src="/img/parceiros-viper.png" class="img-fluid" />
-        </div>
-        <div class="col-lg-3 col-md-3"></div>
+      <div class="row px-3 d-flex flex-column flex-lg-row">
+          <div class="col-lg-2 col-12 pb-5 px-0">
+              <div class="col-6 mx-auto px-0">
+                  <img src="/img/sinduscon-logo.png" class="img-fluid" />
+                </div>
+            </div>
+            <div class="col-10 pb-5 d-flex flex-wrap flex-lg-row justify-content-center">
+              <div class="col-lg-2 col-12 px-0">
+                <img src="/img/apoio-caixa.png" class="img-fluid" />
+              </div>
+              <div class="col-lg-2 col-12 px-0">
+                <img src="/img/patrocinio-senai.png" class="img-fluid" />
+              </div>
+              <div class="col-lg-2 col-12 px-0">
+                <img src="/img/realizacao-svm.png" class="img-fluid" />
+              </div>
+              <div class="col-lg-2 col-12 px-0">
+                <img src="/img/parceiros-locktec.png" class="img-fluid" />
+              </div>
+              <div class="col-lg-2 col-md-3 px-0">
+                  <img src="/img/parceiro-viper.png" class="img-fluid" />
+              </div>
+              <div class="col-lg-2 col-12 px-0">
+                  <img src="/img/haus-paroma.png" class="img-fluid" />
+                </div>
+            </div>
       </div>
     </div>
 
