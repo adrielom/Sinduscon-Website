@@ -1,4 +1,6 @@
 $(document).ready(function() {
+  resettingStuffForXL();
+
   //starting Stuff
   populateListOfBuildings();
   countDown();
@@ -60,10 +62,36 @@ $(document).ready(function() {
       formAction,
       submitName
     );
-    console.log("aux :", aux);
     settingBigImage(aux);
   });
 });
+
+function resettingStuffForXL() {
+  if ($(window).width() >= 1440) {
+    $(".building-description").css("line-height", "0.65rem");
+
+    console.log("list_of_buildings.length :", list_of_buildings.length);
+    //base
+    list_of_buildings[0].description =
+      "<ul class='pl-2'><li> 125,29m² e 126,34m²<li></li> 1 suíte (com closet ou closet e sacada ou closet casal)  </li><li>	3 vagas de garagem  </li><li>	Rua Dr. Batista de Oliveira, 1023 <br> Cocó</li></ul>";
+
+    //corinthus
+    list_of_buildings[6].description =
+      "<ul class='pl-2'><li> 100,30m² </li><li>	4 quartos (3 suítes, sendo 1 master e 1 reversível)  </li><li>	2 ou 3 vagas de garagem  </li><li>	Rua Ministro Abner Vasconcelos, 979 - Sapiranga</li></ul>";
+
+    list_of_buildings[12].description =
+      "<ul class='pl-2'><li>	154,53m² e 158,52m²  </li><li>	3 suítes </li><li>	3 vagas de garagem  </li><li>	Rua Israel Bezerra, 1090 - Cocó </li></ul>";
+
+    list_of_buildings[15].description =
+      "<ul class='pl-2'><li>	61,86m² e 75,23m²  </li><li>	2 ou 3 quartos (1 suíte)  </li><li>	2 vagas de garagem</li><li>	Av. Engenheiro Luís Vieira, 800 <br> Dunas</li></ul>";
+
+    list_of_buildings[19].description =
+      "<ul class='pl-2'><li> 94m², 109m² e 130m² </li><li>	2 ou 3 suítes </li><li>	2 vagas de garagem  </li><li>	Rua Artista Plástico Joaquim de Souza, 101 - Papicu</li></ul>";
+
+    list_of_buildings[26].description =
+      "<ul class='pl-2'><li>	Empreendimento pronto  </li><li> Integrado do Shopping  </li><li>	302 unidades </li><li>	Salas a partir de 33m²</li><li>	Rua Desembargador Lauro Nogueira, 1500 - Papicu</li></ul>";
+  }
+}
 
 function countDown() {
   // Set the date we're counting down to
@@ -148,7 +176,7 @@ let list_of_buildings = [
   new Building(
     "../img/predios/base.png",
     "Essenza Residenziale Cocó",
-    "• 125,29m² e 126,34m²<br>• 1 suíte (com closet ou closet e sacada ou closet casal)  <br>•	3 vagas de garagem  <br>•	Rua Dr. Batista de Oliveira, 1023 - Cocó",
+    "<ul class='pl-2'><li> 125,29m² e 126,34m²</li><li> 1 suíte (com closet ou closet e sacada ou closet casal)  </li><li>	3 vagas de garagem  </li><li>	Rua Dr. Batista de Oliveira, 1023 - Cocó</li> </ul>",
     "../img/logos/base_logo.png",
     "https://feiraosindusconce.us19.list-manage.com/subscribe/post?u=0903e427b8d22f16c7b50b0a5&amp;id=194bc9a513",
     "b_0903e427b8d22f16c7b50b0a5_194bc9a513"
@@ -156,7 +184,7 @@ let list_of_buildings = [
   new Building(
     "../img/predios/bspar.jpg",
     "Marzzano Premium Residence",
-    "• 88m², 100m² e 117m² <br>• 2 ou 3 suítes  <br>•	2 vagas de garagem  <br>•	Rua Francisca Almeida de Souza, 255 <br> Dunas",
+    "<ul class='pl-2'><li> 88m², 100m² e 117m² </li> 2 ou 3 suítes  </li><li>	2 vagas de garagem  </li><li>	Rua Francisca Almeida de Souza, 255 <br> Dunas </li></ul>",
     "../img/logos/bspar_logo.png",
     "https://feiraosindusconce.us19.list-manage.com/subscribe/post?u=0903e427b8d22f16c7b50b0a5&amp;id=8218183ef4",
     "b_0903e427b8d22f16c7b50b0a5_8218183ef4"
@@ -164,7 +192,7 @@ let list_of_buildings = [
   new Building(
     "../img/predios/crolim.png",
     "Bosque das Flores",
-    "•	141,83m² e 182,32m² <br>•	3 ou 4 suítes  (1 closet, com ou sem banheira)  <br>•	3 ou 4 vagas de garagem  <br>•	Rua José Alencar Ramos, 55 Guararapes",
+    "<ul class='pl-2'><li>	141,83m² e 182,32m² </li><li>	3 ou 4 suítes  (1 closet, com ou sem banheira)  </li><li>	3 ou 4 vagas de garagem  </li><li>	Rua José Alencar Ramos, 55 Guararapes</li></ul>",
     "../img/logos/crolim_logo.png",
     "https://feiraosindusconce.us19.list-manage.com/subscribe/post?u=0903e427b8d22f16c7b50b0a5&amp;id=20b104194a",
     "b_0903e427b8d22f16c7b50b0a5_20b104194a"
@@ -172,7 +200,7 @@ let list_of_buildings = [
   new Building(
     "../img/predios/canopus.jpg",
     "Gran Village Messejana",
-    "•	48,04m² <br>•	2 quartos (1 suíte)  <br>•	1 vaga de garagem  <br>•	Rua Luiz Francisco Xavier, s/n <br> Messejana",
+    "<ul class='pl-2'><li>	48,04m² </li><li>	2 quartos (1 suíte)  </li><li>	1 vaga de garagem  </li><li>	Rua Luiz Francisco Xavier, s/n <br> Messejana </li></ul>",
     "../img/logos/canopus_logo.png",
     "https://feiraosindusconce.us19.list-manage.com/subscribe/post?u=0903e427b8d22f16c7b50b0a5&amp;id=997f7f96a7",
     "b_0903e427b8d22f16c7b50b0a5_997f7f96a7"
@@ -180,7 +208,7 @@ let list_of_buildings = [
   new Building(
     "../img/predios/carneiro.png",
     "Carmel Bosque Duo",
-    "•	229m² e 300m² <br>•	3 ou 4 suítes  <br>•	3 a 5 vagas de garagem  <br>•	Rua Francisco Matias, 267   Sabiaguaba",
+    "<ul class='pl-2'><li>	229m² e 300m² </li><li>	3 ou 4 suítes  </li><li>	3 a 5 vagas de garagem  </li><li>	Rua Francisco Matias, 267   Sabiaguaba</li></ul>",
     "../img/logos/carneiro-logo.png",
     "https://feiraosindusconce.us19.list-manage.com/subscribe/post?u=0903e427b8d22f16c7b50b0a5&amp;id=f516c5df03",
     "b_0903e427b8d22f16c7b50b0a5_f516c5df03"
@@ -188,7 +216,7 @@ let list_of_buildings = [
   new Building(
     "../img/predios/columbia.jpg",
     "Edifício Cristal XII",
-    "•	96,85m² <br>•	3 suítes  <br>•	2 vagas de garagem  <br>•	Rua Conselheiro Tristão, 1479 Bairro de Fátima",
+    "<ul class='pl-2'><li>	96,85m² </li><li>	3 suítes  </li><li>	2 vagas de garagem  </li><li>	Rua Conselheiro Tristão, 1479 Bairro de Fátima</li></ul>",
     "../img/logos/const-columbia-logo.png",
     "https://feiraosindusconce.us19.list-manage.com/subscribe/post?u=0903e427b8d22f16c7b50b0a5&amp;id=047613aae6",
     "b_0903e427b8d22f16c7b50b0a5_047613aae6"
@@ -196,7 +224,7 @@ let list_of_buildings = [
   new Building(
     "../img/predios/corinthus.jpg",
     "Edifício Fernando Rocha Residence",
-    "• 100,30m² <br>•	4 quartos (3 suítes, sendo 1 master e 1 reversível)  <br>•	2 ou 3 vagas de garagem  <br>•	Rua Ministro Abner Vasconcelos, 979 <br> Sapiranga",
+    "<ul class='pl-2'><li> 100,30m² </li><li>	4 quartos (3 suítes, sendo 1 master e 1 reversível)  </li><li>	2 ou 3 vagas de garagem  </li><li>	Rua Ministro Abner Vasconcelos, 979  <br>Sapiranga</li></ul>",
     "../img/logos/marca-corintus-logo.png",
     "https://feiraosindusconce.us19.list-manage.com/subscribe/post?u=0903e427b8d22f16c7b50b0a5&amp;id=bda7082afe",
     "b_0903e427b8d22f16c7b50b0a5_bda7082afe"
@@ -204,7 +232,7 @@ let list_of_buildings = [
   new Building(
     "../img/predios/dias-de-sousa.jpg",
     "Parc Victoria",
-    "•	76,50m² <br>•	3 quartos (2 suítes)  <br>•	2 vagas de garagem  <br>•	Av. Comodoro Estácio Brígido, 1999 - Guararapes",
+    "<ul class='pl-2'><li>	76,50m² </li><li>	3 quartos (2 suítes)  </li><li>	2 vagas de garagem  </li><li>	Av. Comodoro Estácio Brígido, 1999 - Guararapes</li></ul>",
     "../img/logos/diasdesousa_logo.png",
     "https://feiraosindusconce.us19.list-manage.com/subscribe/post?u=0903e427b8d22f16c7b50b0a5&amp;id=b10b3e6ecc",
     "b_0903e427b8d22f16c7b50b0a5_b10b3e6ecc"
@@ -212,7 +240,7 @@ let list_of_buildings = [
   new Building(
     "../img/predios/dube.png",
     "Jardins de Murano",
-    "• Áreas de 150m² a 240m² <br>• 10 opções de plantas <br>• 100% personalizável <br>•	3 ou 4 quartos  <br>•	3 ou 4 vagas <br>•	Av. Eusébio de Queiroz, 5684 Centro - Eusébio/CE",
+    "<ul class='pl-2'><li> Áreas de 150m² a 240m² </li><li> 10 opções de plantas </li><li> 100% personalizável </li><li>	3 ou 4 quartos  </li><li>	3 ou 4 vagas de garagem </li><li>	Av. Eusébio de Queiroz, 5684 Centro - Eusébio/CE</li></ul>",
     "../img/logos/dube_logo.png",
     "https://feiraosindusconce.us19.list-manage.com/subscribe/post?u=0903e427b8d22f16c7b50b0a5&amp;id=b86d301e48",
     "b_0903e427b8d22f16c7b50b0a5_b86d301e48"
@@ -220,7 +248,7 @@ let list_of_buildings = [
   new Building(
     "../img/predios/enxegata.jpg",
     "Residencial Guararapes",
-    "•	71,67m², 77,78m² e 78,48m² <br>•	3 quartos (2 suítes, sendo 1 reversível) <br>•	2 vagas  <br>•	Rua Jaime Pinheiro  130 Guararapes",
+    "<ul class='pl-2'><li>	71,67m², 77,78m² e 78,48m² </li><li>	3 quartos (2 suítes, sendo 1 reversível) </li><li>	2 vagas de garagem </li><li>	Rua Jaime Pinheiro  130 Guararapes</li></ul>",
     "../img/logos/engexata_logo.png",
     "https://feiraosindusconce.us19.list-manage.com/subscribe/post?u=0903e427b8d22f16c7b50b0a5&amp;id=33fdd291ec",
     "b_0903e427b8d22f16c7b50b0a5_33fdd291ec"
@@ -228,7 +256,7 @@ let list_of_buildings = [
   new Building(
     "../img/predios/habitus.jpg",
     "Condomínio Jacarandá",
-    "• 73,5m² e 108m²	<br>• 3 quartos (2 suítes e 1 quarto gabinete) <br>•	2 vagas de garagem  <br>•	Rua Bahia, 26 Parque Havaí   Eusébio/CE",
+    "<ul class='pl-2'><li> 73,5m² e 108m²	</li><li> 3 quartos (2 suítes e 1 quarto gabinete) </li><li>	2 vagas de garagem  </li><li>	Rua Bahia, 26 - Parque Havaí   Eusébio/CE</li></ul>",
     "../img/logos/habitus-logo.png",
     "https://feiraosindusconce.us19.list-manage.com/subscribe/post?u=0903e427b8d22f16c7b50b0a5&amp;id=d25a6b5706",
     "b_0903e427b8d22f16c7b50b0a5_d25a6b5706"
@@ -236,7 +264,7 @@ let list_of_buildings = [
   new Building(
     "../img/predios/inova.jpg",
     "Sonata Residence",
-    "•	62,38m² e 72,09m²  <br>•	2 e 3 quartos (1 suíte) <br>•	1 ou 2 vagas de garagem <br>•	Rua Guaramirim, 805 Lagoinha - Eusébio/CE.",
+    "<ul class='pl-2'><li>	62,38m² e 72,09m²  </li><li>	2 e 3 quartos (1 suíte) </li><li>	1 ou 2 vagas de garagem </li><li>	Rua Guaramirim, 805 - Lagoinha  Eusébio/CE</li></ul>",
     "../img/logos/inova-logo.png",
     "https://feiraosindusconce.us19.list-manage.com/subscribe/post?u=0903e427b8d22f16c7b50b0a5&amp;id=3e0012d900",
     "b_0903e427b8d22f16c7b50b0a5_3e0012d900"
@@ -244,7 +272,7 @@ let list_of_buildings = [
   new Building(
     "../img/predios/jsimoes.jpg",
     "Absoluto Parque do Cocó",
-    "•	154,53m² e 158,52m²  <br>•	3 suítes <br>•	3 vagas de garagem  <br>•	Rua Israel Bezerra, 1090 <br>Cocó",
+    "<ul class='pl-2'><li>	154,53m² e 158,52m²  </li><li>	3 suítes </li><li>	3 vagas de garagem  </li><li>	Rua Israel Bezerra, 1090 <br>Cocó</li></ul>",
     "../img/logos/jsimoes_logo.png",
     "https://feiraosindusconce.us19.list-manage.com/subscribe/post?u=0903e427b8d22f16c7b50b0a5&amp;id=3aa1a86a77",
     "b_0903e427b8d22f16c7b50b0a5_3aa1a86a77"
@@ -252,7 +280,7 @@ let list_of_buildings = [
   new Building(
     "../img/predios/jatahy.jpg",
     "Edifício Cidade",
-    "•	53,44m² e 64,72m² <br>• 2 ou 3 quartos (1 suíte) <br>• 1 ou 2 vagas de garagem <br>• Rua Guilherme Rocha, 1299 Centro ",
+    "<ul class='pl-2'><li>	53,44m² e 64,72m² </li><li> 2 ou 3 quartos (1 suíte) </li><li> 1 ou 2 vagas de garagem </li><li> Rua Guilherme Rocha, 1299 Centro</li></ul> ",
     "../img/logos/jatahy-logo.png",
     "https://feiraosindusconce.us19.list-manage.com/subscribe/post?u=0903e427b8d22f16c7b50b0a5&amp;id=b834f9e89f",
     "b_0903e427b8d22f16c7b50b0a5_b834f9e89f"
@@ -260,7 +288,7 @@ let list_of_buildings = [
   new Building(
     "../img/predios/jvs.png",
     "Monte Olimpo 2",
-    "•	De 145,28m² até 210,61m²  <br>•	3 ou 4 quartos (3 ou 4 suítes)  <br>•	2 a 4 vagas de garagem<br>•	Rua Melo César, 801 <br> Cidade dos Funcionários",
+    "<ul class='pl-2'><li>	De 145,28m² até 210,61m²  </li><li>	3 ou 4 quartos (3 ou 4 suítes)  </li><li>	2 a 4 vagas de garagem</li><li>	Rua Melo César, 801 </li><li> Cidade dos Funcionários</li></ul>",
     "../img/logos/jvs_logo.png",
     "https://feiraosindusconce.us19.list-manage.com/subscribe/post?u=0903e427b8d22f16c7b50b0a5&amp;id=42c409853d",
     "b_0903e427b8d22f16c7b50b0a5_42c409853d"
@@ -268,7 +296,7 @@ let list_of_buildings = [
   new Building(
     "../img/predios/magis.png",
     "Talassa Dunas Residence",
-    "•	61,86m² e 75,23m²  <br>•	2 ou 3 quartos (1 suíte)  <br>•	2 vagas de garagem<br>•	Av. Engenheiro Luís Vieira, 800 - Dunas",
+    "<ul class='pl-2'><li>	61,86m² e 75,23m²  </li><li>	2 ou 3 quartos (1 suíte)  </li><li>	2 vagas de garagem</li><li>	Av. Engenheiro Luís Vieira, 800 - Dunas</li></ul>",
     "../img/logos/magis-logo.png",
     "https://feiraosindusconce.us19.list-manage.com/subscribe/post?u=0903e427b8d22f16c7b50b0a5&amp;id=7294698160",
     "b_0903e427b8d22f16c7b50b0a5_7294698160"
@@ -276,7 +304,7 @@ let list_of_buildings = [
   new Building(
     "../img/predios/mendoca-marbella.png",
     "Marbella Home Club",
-    "•	110,03m²  <br>•	3 suítes (varanda gourmet) <br>•	2 vagas de garagem  <br>•	Rua Antônio Augusto, 1700 Aldeota",
+    "<ul class='pl-2'><li>	110,03m²  </li><li>	3 suítes (varanda gourmet) </li><li>	2 vagas de garagem  </li><li>	Rua Antônio Augusto, 1700 Aldeota</li></ul>",
     "../img/logos/mendonca-logo.png",
     "https://feiraosindusconce.us19.list-manage.com/subscribe/post?u=0903e427b8d22f16c7b50b0a5&amp;id=6b5a71793e",
     "b_0903e427b8d22f16c7b50b0a5_6b5a71793e"
@@ -284,7 +312,7 @@ let list_of_buildings = [
   new Building(
     "../img/predios/monteplan.jpg",
     "Condomínio Belas Artes",
-    "•	75m² e 95m²  <br>•	3 quartos (1 suíte) <br>•	2 vagas de garagem  <br>•	Rua Padre Valdevino, 714 Aldeota",
+    "<ul class='pl-2'><li>	75m² e 95m²  </li><li>	3 quartos (1 suíte) </li><li>	2 vagas de garagem  </li><li>	Rua Padre Valdevino, 714 Aldeota</li></ul>",
     "../img/logos/monteplan-logo.png",
     "https://feiraosindusconce.us19.list-manage.com/subscribe/post?u=0903e427b8d22f16c7b50b0a5&amp;id=ce49469977",
     "b_0903e427b8d22f16c7b50b0a5_ce49469977"
@@ -292,7 +320,7 @@ let list_of_buildings = [
   new Building(
     "../img/predios/mota-machado.jpg",
     "Reservatto Condomínio Parque",
-    "• 74,05m²	<br>• 2 ou 3 quartos (2 suítes) <br>•	2 vagas de garagem  <br>•	Rua Luíza Miranda Coelho, 1130 <br> Guararapes",
+    "<ul class='pl-2'><li> 74,05m²	</li><li> 2 ou 3 quartos (2 suítes) </li><li>	2 vagas de garagem  </li><li>	Rua Luíza Miranda Coelho, 1130 <br> Guararapes</li></ul>",
     "../img/logos/mota-machado-logo.png",
     "https://feiraosindusconce.us19.list-manage.com/subscribe/post?u=0903e427b8d22f16c7b50b0a5&amp;id=73c24a94bf",
     "b_0903e427b8d22f16c7b50b0a5_73c24a94bf"
@@ -300,7 +328,7 @@ let list_of_buildings = [
   new Building(
     "../img/predios/moura-dubeaux.jpg",
     "Metropolitan Central Park",
-    "• 94m², 109m² e 130m² <br>•	2 ou 3 suítes <br>•	2 vagas de garagem  <br>•	Rua Artista Plástico Joaquim de Souza, 101<br> Papicu",
+    "<ul class='pl-2'><li> 94m², 109m² e 130m² </li><li>	2 ou 3 suítes </li><li>	2 vagas de garagem  </li><li>	Rua Artista Plástico Joaquim de Souza, 101<br> Papicu</li></ul>",
     "../img/logos/moura-dubeux-engenharia-original_logo.png",
     "https://feiraosindusconce.us19.list-manage.com/subscribe/post?u=0903e427b8d22f16c7b50b0a5&amp;id=05b49c9091",
     "b_0903e427b8d22f16c7b50b0a5_05b49c9091"
@@ -308,7 +336,7 @@ let list_of_buildings = [
   new Building(
     "../img/predios/mhr.png",
     "Fonte das Artes Parque Michelangelo",
-    "•	41,85m², 44,12m² e 47,69m²   <br>•	2 quartos  <br>•	1 vaga de garagem <br>•	Rua A - Messejana",
+    "<ul class='pl-2'><li>	41,85m², 44,12m² e 47,69m²   </li><li>	2 quartos  </li><li>	1 vaga de garagem </li><li>	Rua A - Messejana</li></ul>",
     "../img/logos/mrv_logo.png",
     "https://feiraosindusconce.us19.list-manage.com/subscribe/post?u=0903e427b8d22f16c7b50b0a5&amp;id=5595ee9a31",
     "b_0903e427b8d22f16c7b50b0a5_5595ee9a31"
@@ -316,7 +344,7 @@ let list_of_buildings = [
   new Building(
     "../img/predios/muza.jpg",
     "Residencial Villa Firenze",
-    "•	59,71 m² e 65,75 m²  <br>•	2 e 3 quartos <br>•	1 vaga de garagem  <br>•	Rua Cel. João de Oliveira, 555  Cambeba",
+    "<ul class='pl-2'><li>	59,71 m² e 65,75 m²  </li><li>	2 e 3 quartos </li><li>	1 vaga de garagem  </li><li>	Rua Cel. João de Oliveira, 555  Cambeba</li></ul>",
     "../img/logos/muz_logo.png",
     "https://feiraosindusconce.us19.list-manage.com/subscribe/post?u=0903e427b8d22f16c7b50b0a5&amp;id=3630f2a797",
     "b_0903e427b8d22f16c7b50b0a5_3630f2a797"
@@ -324,7 +352,7 @@ let list_of_buildings = [
   new Building(
     "../img/predios/novaes.jpg",
     "Viva La Vida Park Residence",
-    "•	95,10m², 116,44m², 126,09m² e 126,73m² <br>• 3 ou 4 quartos	(3 suítes) <br>•	2 vagas de garagem  <br>•	Rua Evaristo da Veiga 140 Parque Del Sol<br> Cidade dos Funcionários",
+    "<ul class='pl-2'><li>	95,10m², 116,44m², 126,09m² e 126,73m² </li><li> 3 ou 4 quartos	(3 suítes) </li><li>	2 vagas de garagem  </li><li>	Rua Evaristo da Veiga 140 Parque Del Sol<br> Cidade dos Funcionários</li></ul>",
     "../img/logos/novaes-logo.png",
     "https://feiraosindusconce.us19.list-manage.com/subscribe/post?u=0903e427b8d22f16c7b50b0a5&amp;id=f20f01c8fc",
     "b_0903e427b8d22f16c7b50b0a5_f20f01c8fc"
@@ -332,7 +360,7 @@ let list_of_buildings = [
   new Building(
     "../img/predios/placic.jpg",
     "Promenade Aldeota",
-    "•	158,26m²  <br>•	3 suítes + 1 gabinete com WC reversível <br>•	3 vagas de garagem  <br>•	Rua Carolina Sucupira, 400   Aldeota",
+    "<ul class='pl-2'><li>	158,26m²  </li><li>	3 suítes + 1 gabinete com WC reversível </li><li>	3 vagas de garagem  </li><li>	Rua Carolina Sucupira, 400   Aldeota</li></ul>",
     "../img/logos/placic_logo.png",
     "https://feiraosindusconce.us19.list-manage.com/subscribe/post?u=0903e427b8d22f16c7b50b0a5&amp;id=6594f50c5c",
     "b_0903e427b8d22f16c7b50b0a5_6594f50c5c"
@@ -340,15 +368,15 @@ let list_of_buildings = [
   new Building(
     "../img/predios/porto-freire.jpg",
     "Villa Gaudí",
-    "•	60m² e 86m²  <br>•	2 ou 3 quartos (1 ou 2 suítes) e 1 WC Social  <br>•	1 ou 2 vagas de garagem  <br>• Rua Alódia, 203 <br>Cidade dos Funcionários",
+    "<ul class='pl-2'><li>	60m² e 86m²  </li><li>	2 ou 3 quartos (1 ou 2 suítes) e 1 WC Social  </li><li>	1 ou 2 vagas de garagem  </li><li> Rua Alódia, 203 <br>Cidade dos Funcionários</li></ul>",
     "../img/logos/porto-freire-logo.png",
     "https://feiraosindusconce.us19.list-manage.com/subscribe/post?u=0903e427b8d22f16c7b50b0a5&amp;id=bff604599f",
     "b_0903e427b8d22f16c7b50b0a5_bff604599f"
   ),
   new Building(
     "../img/predios/rci.jpg",
-    "Reserva Castelão",
-    "•	54,07m² e 60,56m²  <br>•	3 quartos (2 suítes, sendo 1 reversível)  <br>•	1 ou 2 vagas de garagem  <br>• Rua Adélia Feijó, 755 Castelão",
+    "Absolut Condominium",
+    "<ul class='pl-2'><li>	150m²  </li><li> 4 suítes (1 reversível) e varanda gourmet  </li><li>	2 ou 3 vagas de garagem </li><li>	Rua Vicente Linhares, 631  <br> Aldeota</li></ul>",
     "../img/logos/rci_logo.png",
     "https://feiraosindusconce.us19.list-manage.com/subscribe/post?u=0903e427b8d22f16c7b50b0a5&amp;id=e75c3f499c",
     "b_0903e427b8d22f16c7b50b0a5_e75c3f499c"
@@ -356,15 +384,23 @@ let list_of_buildings = [
   new Building(
     "../img/predios/riomar.jpg",
     "Empresarial RioMar Trade Center ",
-    "•	Empreendimento pronto  <br>• Integrado do Shopping  <br>•	302 unidades <br>•	Salas a partir de 33m²<br>•	Rua Desembargador Lauro Nogueira, 1500 <br>Papicu",
+    "<ul class='pl-2'><li>	Empreendimento pronto  </li><li> Integrado do Shopping  </li><li>	302 unidades </li><li>	Salas a partir de 33m²</li><li>	Rua Desembargador Lauro Nogueira, 1500 <br>Papicu</li></ul>",
     "../img/logos/riomar-logo.png",
     "https://feiraosindusconce.us19.list-manage.com/subscribe/post?u=0903e427b8d22f16c7b50b0a5&amp;id=368aae53f7",
     "b_0903e427b8d22f16c7b50b0a5_368aae53f7"
   ),
   new Building(
+    "../img/predios/sabar.png",
+    "Garden Ville Stilo",
+    "<ul class='pl-2'><li>	180m²  </li><li>	4 amplas suítes, estar íntimo e varanda gourmet  </li><li>	3 vagas de garagem  </li><li> Rua Mirian Abreu, 230 <br> Urucunema - Eusébio/CE</li></ul>",
+    "../img/logos/sabar-logo.jpeg",
+    "https://feiraosindusconce.us19.list-manage.com/subscribe/post?u=0903e427b8d22f16c7b50b0a5&amp;id=ffbb3b8556",
+    "b_0903e427b8d22f16c7b50b0a5_ffbb3b8556"
+  ),
+  new Building(
     "../img/predios/terra-brasilis.jpg",
     "Reserva Terra Brasilis",
-    "•	Lotes a partir de 300m²<br>•	Loteamento fechado de alto padrão <br>•	Rodovia CE-040,	Km 12 (Próximo ao Circo Tupiniquim) Aquiraz/CE ",
+    "<ul class='pl-2'><li>	Lotes a partir de 300m²</li><li>	Loteamento fechado de alto padrão </li><li>	Rodovia CE-040,	Km 12 (Próximo ao Circo Tupiniquim) Aquiraz/CE </li></ul>",
     "../img/logos/terra-brasilis-logo.png",
     "https://feiraosindusconce.us19.list-manage.com/subscribe/post?u=0903e427b8d22f16c7b50b0a5&amp;id=bbb6912260",
     "b_0903e427b8d22f16c7b50b0a5_bbb6912260"
@@ -408,9 +444,6 @@ function settingBuildings(b, index) {
   b.children[1].children[5].style.display = "none";
   b.children[1].children[4].innerHTML = list_of_buildings[index].formAction;
   b.children[1].children[4].style.display = "none";
-
-  console.log("submitName :", b.children[1].children[5].innerHTML);
-  console.log("formAction :", b.children[1].children[4].formAction);
 }
 
 function settingBuildingsGallery(b, index) {
@@ -439,10 +472,6 @@ function settingBigBuildings(b, obj) {
 
   //sets the title of a specific object
   b.children[1].children[0].innerHTML = obj.title;
-
-  console.log("obj.formAction :", obj.formAction);
-  console.log("obj.submitName :", obj.submitName);
-
   //sets the description of a specific object
   b.children[1].children[1].innerHTML = obj.description;
   //sets the form action to work with mailchimp
