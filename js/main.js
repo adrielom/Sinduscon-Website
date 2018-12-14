@@ -2,10 +2,10 @@ $(document).ready(function() {
   resettingStuffForXL();
 
   //starting Stuff
-  populateListOfBuildings();
+ // populateListOfBuildings();
   countDown();
 
-  $("#tela-10").hide();
+ // $("#tela-10").hide();
 
   $("#video").mouseover(function() {
     $("#video-title").hide();
@@ -15,10 +15,10 @@ $(document).ready(function() {
     $("#video-title").show();
   });
 
-  setInterval(function(e) {
+ /* setInterval(function(e) {
     smallGallery(smallGalleryIndex);
   }, 3000);
-
+*/
   $("#map").mouseover(function() {
     $("#info-map").hide();
   });
@@ -32,6 +32,7 @@ $(document).ready(function() {
     $("#map iframe").css("pointer-events", "auto");
   });
 
+  /*
   $(".schedule-visit-btn").click(function() {
     let title = $(this)
       .siblings(".building-title")
@@ -64,6 +65,7 @@ $(document).ready(function() {
     );
     settingBigImage(aux);
   });
+  */
 });
 
 function resettingStuffForXL() {
@@ -130,7 +132,7 @@ function countDown() {
     if (distance <= 0 || days <= 0) {
       clearInterval(x);
       title.innerHTML =
-        "QUER UM IMÓVEL <br> PRONTO PARA  <br> MORAR JÁ? <br> A HORA É AGORA!";
+        "30 CONSTRUTORAS. 15 PARCEIROS <br> UM ÚNICO OBJETIVO: MOSTRAR A FORÇA <br> DO MERCADO IMOBILIÁRIO DO CEARÁ.";
       dm.textContent = "";
       $(".counter-bg").hide();
     } else {
